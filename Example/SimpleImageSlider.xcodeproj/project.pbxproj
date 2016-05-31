@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		209B4CDB753B29B5F7CA3A1E /* SimpleImageSlider.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimpleImageSlider.podspec; path = ../SimpleImageSlider.podspec; sourceTree = "<group>"; };
+		209B4CDB753B29B5F7CA3A1E /* SimpleImageSlider.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimpleImageSlider.podspec; path = ../SimpleImageSlider.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		457D58A31CFE06650012C387 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		457D58A41CFE06650012C387 /* CHImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHImagesViewController.h; sourceTree = "<group>"; };
 		457D58A51CFE06650012C387 /* CHImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHImagesViewController.m; sourceTree = "<group>"; };
