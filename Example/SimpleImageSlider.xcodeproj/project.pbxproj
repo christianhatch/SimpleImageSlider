@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		22B2753CB080DFA7B29C90DF /* Pods_SimpleImageSlider_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719C860744E1E5ADAE2C2999 /* Pods_SimpleImageSlider_Example.framework */; };
+		457D58A81CFE06650012C387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457D58A31CFE06650012C387 /* Main.storyboard */; };
+		457D58A91CFE06650012C387 /* CHImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D58A51CFE06650012C387 /* CHImagesViewController.m */; };
+		457D58AA1CFE06650012C387 /* CHImageURLsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D58A71CFE06650012C387 /* CHImageURLsViewController.m */; };
+		457D58AC1CFE066F0012C387 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457D58AB1CFE066F0012C387 /* Images.xcassets */; };
+		457D58AE1CFE078A0012C387 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457D58AD1CFE078A0012C387 /* Launch Screen.storyboard */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* CHAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* CHViewController.m */; };
-		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		902E2E071243F2EF3B1EFE83 /* Pods_SimpleImageSlider_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DD54E0BA41ED02C00622BF /* Pods_SimpleImageSlider_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,13 @@
 
 /* Begin PBXFileReference section */
 		209B4CDB753B29B5F7CA3A1E /* SimpleImageSlider.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimpleImageSlider.podspec; path = ../SimpleImageSlider.podspec; sourceTree = "<group>"; };
+		457D58A31CFE06650012C387 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		457D58A41CFE06650012C387 /* CHImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHImagesViewController.h; sourceTree = "<group>"; };
+		457D58A51CFE06650012C387 /* CHImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHImagesViewController.m; sourceTree = "<group>"; };
+		457D58A61CFE06650012C387 /* CHImageURLsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHImageURLsViewController.h; sourceTree = "<group>"; };
+		457D58A71CFE06650012C387 /* CHImageURLsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHImageURLsViewController.m; sourceTree = "<group>"; };
+		457D58AB1CFE066F0012C387 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		457D58AD1CFE078A0012C387 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		45947A9AC9911BA930EB0F6A /* Pods-SimpleImageSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleImageSlider_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleImageSlider_Tests/Pods-SimpleImageSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		45DD54E0BA41ED02C00622BF /* Pods_SimpleImageSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleImageSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		532F7755AC2496EBCAB25187 /* Pods-SimpleImageSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleImageSlider_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleImageSlider_Example/Pods-SimpleImageSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,9 +59,6 @@
 		6003F59B195388D20070C39A /* SimpleImageSlider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleImageSlider-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* CHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* CHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
-		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* SimpleImageSlider_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleImageSlider_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
@@ -62,7 +68,6 @@
 		719C860744E1E5ADAE2C2999 /* Pods_SimpleImageSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleImageSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CC7ABAECE5FACB944A4748 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8726EBAF9E72830BC9151FE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C3B7979E822B748145FE7ADB /* Pods-SimpleImageSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleImageSlider_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleImageSlider_Tests/Pods-SimpleImageSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E80D53E9AEC00B3D00500393 /* Pods-SimpleImageSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleImageSlider_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleImageSlider_Example/Pods-SimpleImageSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,10 +137,12 @@
 			children = (
 				6003F59C195388D20070C39A /* CHAppDelegate.h */,
 				6003F59D195388D20070C39A /* CHAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* CHViewController.h */,
-				6003F5A6195388D20070C39A /* CHViewController.m */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
+				457D58A31CFE06650012C387 /* Main.storyboard */,
+				457D58A41CFE06650012C387 /* CHImagesViewController.h */,
+				457D58A51CFE06650012C387 /* CHImagesViewController.m */,
+				457D58A61CFE06650012C387 /* CHImageURLsViewController.h */,
+				457D58A71CFE06650012C387 /* CHImageURLsViewController.m */,
+				457D58AB1CFE066F0012C387 /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for SimpleImageSlider";
@@ -145,6 +152,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				457D58AD1CFE078A0012C387 /* Launch Screen.storyboard */,
 				6003F595195388D20070C39A /* SimpleImageSlider-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -276,8 +284,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				457D58AC1CFE066F0012C387 /* Images.xcassets in Resources */,
+				457D58A81CFE06650012C387 /* Main.storyboard in Resources */,
+				457D58AE1CFE078A0012C387 /* Launch Screen.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,8 +399,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457D58A91CFE06650012C387 /* CHImagesViewController.m in Sources */,
+				457D58AA1CFE06650012C387 /* CHImageURLsViewController.m in Sources */,
 				6003F59E195388D20070C39A /* CHAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* CHViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

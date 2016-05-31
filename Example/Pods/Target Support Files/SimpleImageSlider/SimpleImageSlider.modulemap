@@ -1,0 +1,6 @@
+framework module SimpleImageSlider {
+  umbrella header "SimpleImageSlider-umbrella.h"
+
+  export *
+  module * { export * }
+}
