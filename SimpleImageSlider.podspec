@@ -20,7 +20,7 @@ s.homepage         = 'https://github.com/christianhatch/SimpleImageSlider'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Christian Hatch' => 'christianhatch@gmail.com' }
 s.source           = { :git => 'https://github.com/christianhatch/SimpleImageSlider.git', :tag => s.version.to_s }
-# s.social_media_url = 'https://twitter.com/commodoreftp'
+s.social_media_url = 'https://twitter.com/commodoreftp'
 
 s.ios.deployment_target = '8.0'
 
