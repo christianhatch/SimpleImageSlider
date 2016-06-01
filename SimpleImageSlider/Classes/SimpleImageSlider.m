@@ -47,17 +47,41 @@ const CGFloat ImageOffset = 0;
     return slider;
 }
 
+- (instancetype)init
+{
+    self = [super initWithFrame:CGRectZero];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.pagingEnabled = YES;
-        self.showsHorizontalScrollIndicator = NO;
-        self.backgroundColor = [UIColor clearColor];
-        self.delegate = self;
+        [self commonInit];
     }
     return self;
 }
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void)commonInit
+{
+    self.pagingEnabled = YES;
+    self.showsHorizontalScrollIndicator = NO;
+    self.backgroundColor = [UIColor clearColor];
+    self.delegate = self;
+}
+
 
 
 
@@ -107,7 +131,8 @@ const CGFloat ImageOffset = 0;
         
     }
     
-    self.contentSize = CGSizeMake(([self proxyData].count * width) + (ImageOffset * [self proxyData].count) - ImageOffset, height);
+    CGFloat sizeWidth = ([self proxyData].count * width) + (ImageOffset * [self proxyData].count) - ImageOffset;
+    self.contentSize = CGSizeMake(sizeWidth, height);
 }
 
 
@@ -181,7 +206,7 @@ const CGFloat ImageOffset = 0;
     CGFloat width = self.superview.frame.size.width;
     
     self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0,
-                                                                       10,
+                                                                       5,
                                                                        width,
                                                                        height)];
     
@@ -220,7 +245,6 @@ const CGFloat ImageOffset = 0;
 {
     __block UIImageView *weakSelf = self;
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:imageURL];
-//    [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
 
     [self setImageWithURLRequest:request
                 placeholderImage:placeholder

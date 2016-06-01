@@ -11,7 +11,7 @@
 @interface SimpleImageSlider : UIScrollView
 
 /**
- Designated Initializer!
+ Designated Initializer for images!
  
  @param frame  The frame of the ImageSlider.
  @param images The images to be set on the ImageSlider
@@ -22,7 +22,7 @@
                                       images:(nullable NSArray<UIImage *> *)images;
 
 /**
- Designated Initializer!
+ Designated Initializer for image URLs!
  
  @param frame  The frame of the ImageSlider.
  @param images The urls of the images to be set on the ImageSlider
@@ -35,12 +35,12 @@
 /**
  An array of imageURLs used to populate the image scroller. Nil if the ImageSlider was created with images.
  */
-@property (nonatomic, copy, nullable) NSArray *imageURLs;
+@property (nonatomic, copy, nullable) NSArray<NSURL *> *imageURLs;
 
 /**
  An array of images used to populate the image scroller. Nil if the ImageSlider was created with imageURLs.
  */
-@property (nonatomic, copy, nullable) NSArray *images;
+@property (nonatomic, copy, nullable) NSArray<UIImage *> *images;
 
 
 @end

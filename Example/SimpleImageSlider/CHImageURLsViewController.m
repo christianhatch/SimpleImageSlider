@@ -18,11 +18,6 @@
 
 @implementation CHImageURLsViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self setupHeader];
-}
 
 - (void)setupHeader {
     NSArray *images = @[[NSURL URLWithString:@"https://raw.githubusercontent.com/christianhatch/SimpleImageSlider/master/url_1.jpg"],
@@ -35,32 +30,5 @@
     self.tableView.tableHeaderView = slider;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
-#pragma mark - UITableView Datasource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReuseID" forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell %li", (long)indexPath.row];
-    return cell;
-}
-
-#pragma mark - UITableView Delegate
-
-- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    return false;
-}
 
 @end

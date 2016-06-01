@@ -6,8 +6,9 @@
 //  Copyright © 2016 Christian Hatch. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+#import "CHViewController.h"
 
-@interface CHImageURLsViewController : UIViewController
+@interface CHImageURLsViewController : CHViewController
 
 @end

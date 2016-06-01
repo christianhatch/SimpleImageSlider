@@ -1,22 +1,30 @@
 //
-//  CHImagesViewController.m
-//  ImageSlider
+//  CHInterfaceBuilderViewController.m
+//  SimpleImageSlider
 //
 //  Created by Christian Hatch on 5/31/16.
 //  Copyright © 2016 Christian Hatch. All rights reserved.
 //
 
-#import "CHImagesViewController.h"
+#import "CHInterfaceBuilderViewController.h"
 #import <SimpleImageSlider/SimpleImageSlider.h>
 
-@interface CHImagesViewController ()
+@interface CHInterfaceBuilderViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet SimpleImageSlider *imageSlider;
 
 @end
 
+@implementation CHInterfaceBuilderViewController
 
-@implementation CHImagesViewController
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self setupHeader];
+}
 
 - (void)setupHeader {
     NSArray *images = @[[UIImage imageNamed:@"image1"],
@@ -24,22 +32,9 @@
                         [UIImage imageNamed:@"image3"],
                         [UIImage imageNamed:@"image4"],
                         [UIImage imageNamed:@"image5"]];
-  
-    SimpleImageSlider *slider = [SimpleImageSlider imageSliderWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300) images:images];
-    self.tableView.tableHeaderView = slider;
+    
+    self.imageSlider.images = images;
 }
 
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
