@@ -204,12 +204,6 @@ const CGFloat ImageOffset = 0;
 
 #pragma mark - Private Methods
 
-- (void)didMoveToSuperview {
-    if (self.superview != nil) {
-        [self setupPageControl];
-    }
-}
-
 - (void)setupPageControl
 {
     [self.pageControl removeFromSuperview];
