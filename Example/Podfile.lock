@@ -17,14 +17,12 @@ PODS:
   - PureLayout (3.0.2)
   - SimpleImageSlider (0.2.0):
     - AFNetworking
-    - VGParallaxHeader
-  - VGParallaxHeader (0.0.6):
     - PureLayout
 
 DEPENDENCIES:
   - AFNetworking
+  - PureLayout
   - SimpleImageSlider (from `../`)
-  - VGParallaxHeader
 
 EXTERNAL SOURCES:
   SimpleImageSlider:
@@ -33,9 +31,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  SimpleImageSlider: a80d1083542bcc58c015a3a03340afcc453b3c94
-  VGParallaxHeader: 1213aba58c9b0aea84f9e81ad526fde57aa4fe48
+  SimpleImageSlider: 279f377f5dfbbaf81e85301ac0d69239f3933efa
 
-PODFILE CHECKSUM: 9eabbf5024f81aec831e51061c4882eb9a329492
+PODFILE CHECKSUM: 387c6572e475db66295179ab45f589ebdd1d4010
 
 COCOAPODS: 1.0.0

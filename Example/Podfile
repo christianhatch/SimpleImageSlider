@@ -3,8 +3,8 @@ use_frameworks!
 target 'SimpleImageSlider_Example' do
   pod 'SimpleImageSlider', :path => '../'
   pod 'AFNetworking'
-  pod 'VGParallaxHeader'
-  
+  pod 'PureLayout'
+
   
   target 'SimpleImageSlider_Tests' do
     inherit! :search_paths

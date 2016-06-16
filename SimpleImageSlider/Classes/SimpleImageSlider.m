@@ -8,7 +8,8 @@
 
 #import "SimpleImageSlider.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
-#import <VGParallaxHeader/UIScrollView+VGParallaxHeader.h>
+#import "UIScrollView+VGParallaxHeader.h"
+
 
 @interface UIImageView (SimpleImageSlider)
 

@@ -9,7 +9,7 @@
 
 #import <objc/runtime.h>
 #import <QuartzCore/QuartzCore.h>
-#import "PureLayout.h"
+#import <PureLayout/PureLayout.h>
 
 static char UIScrollViewVGParallaxHeader;
 static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
@@ -33,6 +33,8 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
 
 @property (nonatomic, readwrite) CGFloat originalTopInset;
 @property (nonatomic, readwrite) CGFloat originalHeight;
+
+@property (nonatomic, readwrite) CGFloat headerHeight;
 
 @property (nonatomic, strong, readwrite) NSLayoutConstraint *insetAwarePositionConstraint;
 @property (nonatomic, strong, readwrite) NSLayoutConstraint *insetAwareSizeConstraint;
@@ -65,6 +67,9 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
                                                            contentView:view
                                                                   mode:mode
                                                                 height:height];
+    
+    self.parallaxHeader.headerHeight = height;
+    
     // Calling this to position everything right
     [self shouldPositionParallaxHeader];
     
@@ -82,6 +87,26 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
            forKeyPath:NSStringFromSelector(@selector(contentInset))
               options:NSKeyValueObservingOptionNew
               context:VGParallaxHeaderObserverContext];
+}
+
+- (void)updateParallaxHeaderViewHeight:(CGFloat)height
+{
+    CGFloat newContentInset = 0;
+    UIEdgeInsets selfContentInset = self.contentInset;
+    
+    if (height < self.parallaxHeader.headerHeight) {
+        newContentInset = self.parallaxHeader.headerHeight - height;
+        selfContentInset.top -= newContentInset;
+    } else {
+        newContentInset = height - self.parallaxHeader.headerHeight;
+        selfContentInset.top += newContentInset;
+    }
+    
+    self.contentInset = selfContentInset;
+    self.contentOffset = CGPointMake(0, -selfContentInset.top);
+    
+    self.parallaxHeader.headerHeight = height;
+    [self.parallaxHeader setNeedsLayout];
 }
 
 - (void)shouldPositionParallaxHeader
@@ -279,9 +304,11 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
 - (void)willMoveToSuperview:(UIView *)newSuperview
 {
     if (self.superview && newSuperview == nil) {
-        [self.superview removeObserver:self
-                            forKeyPath:NSStringFromSelector(@selector(contentInset))
-                               context:VGParallaxHeaderObserverContext];
+        if ([self.superview respondsToSelector:@selector(contentInset)]) {
+            [self.superview removeObserver:self
+                                forKeyPath:NSStringFromSelector(@selector(contentInset))
+                                   context:VGParallaxHeaderObserverContext];
+        }
     }
 }
 

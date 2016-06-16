@@ -87,11 +87,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PureLayout/PureLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SimpleImageSlider/SimpleImageSlider.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/VGParallaxHeader/VGParallaxHeader.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PureLayout/PureLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SimpleImageSlider/SimpleImageSlider.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/VGParallaxHeader/VGParallaxHeader.framework"
 fi

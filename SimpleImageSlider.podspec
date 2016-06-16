@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'SimpleImageSlider'
-    s.version          = '0.2.0'
+    s.version          = '0.2.1'
     s.summary          = 'SimpleImageSlider is a simple view that creates a scrollable gallery of images.'
 
     s.description      = <<-DESC
@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
     s.source_files = 'SimpleImageSlider/Classes/**/*'
 
     s.dependency 'AFNetworking'
-    s.dependency 'VGParallaxHeader'
+    s.dependency 'PureLayout'
 end
