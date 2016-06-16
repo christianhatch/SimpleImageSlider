@@ -229,11 +229,11 @@ const CGFloat ImageOffset = 0;
 
 #pragma mark - Parallax
 
-- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView;
+- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView height:(CGFloat)height;
 {
     [scrollView setParallaxHeaderView:self
                                  mode:VGParallaxHeaderModeTopFill
-                               height:300];
+                               height:height];
 }
 
 - (void)scrollViewScrolled:(UIScrollView *)scrollView;

@@ -48,7 +48,7 @@
  *
  *  @param scrollView The scrollview to which the parallax effect should be added.
  */
-- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView;
+- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView height:(CGFloat)height;
 
 /**
  *  If the parallax effect has been added (by calling 'addParallaxToScrollView:') then you must call this method as the scroll view scrolls.
