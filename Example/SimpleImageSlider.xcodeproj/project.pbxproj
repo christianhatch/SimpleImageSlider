@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22B2753CB080DFA7B29C90DF /* Pods_SimpleImageSlider_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719C860744E1E5ADAE2C2999 /* Pods_SimpleImageSlider_Example.framework */; };
+		4507B1F21D132B9C0007502D /* CHCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4507B1F11D132B9C0007502D /* CHCollectionViewController.m */; };
 		457D58A81CFE06650012C387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457D58A31CFE06650012C387 /* Main.storyboard */; };
 		457D58A91CFE06650012C387 /* CHImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D58A51CFE06650012C387 /* CHImagesViewController.m */; };
 		457D58AA1CFE06650012C387 /* CHImageURLsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D58A71CFE06650012C387 /* CHImageURLsViewController.m */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		209B4CDB753B29B5F7CA3A1E /* SimpleImageSlider.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimpleImageSlider.podspec; path = ../SimpleImageSlider.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4507B1F01D132B9B0007502D /* CHCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCollectionViewController.h; sourceTree = "<group>"; };
+		4507B1F11D132B9C0007502D /* CHCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCollectionViewController.m; sourceTree = "<group>"; };
 		457D58A31CFE06650012C387 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		457D58A41CFE06650012C387 /* CHImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHImagesViewController.h; sourceTree = "<group>"; };
 		457D58A51CFE06650012C387 /* CHImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHImagesViewController.m; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				45FC812D1CFE520200CC8390 /* CHInterfaceBuilderViewController.m */,
 				45C7B79C1D131F7000895F7D /* CHParallaxViewController.h */,
 				45C7B79D1D131F7000895F7D /* CHParallaxViewController.m */,
+				4507B1F01D132B9B0007502D /* CHCollectionViewController.h */,
+				4507B1F11D132B9C0007502D /* CHCollectionViewController.m */,
 				457D58AB1CFE066F0012C387 /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -419,6 +424,7 @@
 				457D58AA1CFE06650012C387 /* CHImageURLsViewController.m in Sources */,
 				6003F59E195388D20070C39A /* CHAppDelegate.m in Sources */,
 				45FC812E1CFE520200CC8390 /* CHInterfaceBuilderViewController.m in Sources */,
+				4507B1F21D132B9C0007502D /* CHCollectionViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				45FC81311CFE528F00CC8390 /* CHViewController.m in Sources */,
 			);
