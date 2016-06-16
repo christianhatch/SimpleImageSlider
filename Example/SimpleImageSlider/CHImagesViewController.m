@@ -9,10 +9,10 @@
 #import "CHImagesViewController.h"
 #import <SimpleImageSlider/SimpleImageSlider.h>
 
-@interface CHImagesViewController ()
+@interface CHImagesViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic, strong) SimpleImageSlider *header;
 @end
 
 
@@ -25,10 +25,16 @@
                         [UIImage imageNamed:@"image4"],
                         [UIImage imageNamed:@"image5"]];
   
-    SimpleImageSlider *slider = [SimpleImageSlider imageSliderWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300) images:images];
-    self.tableView.tableHeaderView = slider;
+    self.header = [SimpleImageSlider imageSliderWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300) images:images];
+//    self.tableView.tableHeaderView = slider;
+    [self.header addParallaxToScrollView:self.tableView];
+    
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.header scrollViewScrolled:scrollView];
+}
 
 @end
 

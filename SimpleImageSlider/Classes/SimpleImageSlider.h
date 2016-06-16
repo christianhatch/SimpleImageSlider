@@ -43,4 +43,8 @@
 @property (nonatomic, copy, nullable) NSArray<UIImage *> *images;
 
 
+- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView;
+
+- (void)scrollViewScrolled:(UIScrollView *)scrollView;
+
 @end

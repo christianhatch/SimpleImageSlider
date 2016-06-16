@@ -8,6 +8,7 @@
 
 #import "SimpleImageSlider.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import <VGParallaxHeader/UIScrollView+VGParallaxHeader.h>
 
 @interface UIImageView (SimpleImageSlider)
 
@@ -116,6 +117,7 @@ const CGFloat ImageOffset = 0;
         imgView.contentMode = UIViewContentModeScaleAspectFill;
         imgView.clipsToBounds = YES;
         imgView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0.83 alpha:1];
+        imgView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         [self addSubview:imgView];
         
         if ([self proxyData] == self.images) {
@@ -144,6 +146,15 @@ const CGFloat ImageOffset = 0;
         CGFloat pageWidth = self.frame.size.width;
         NSUInteger page = floor((self.contentOffset.x - (pageWidth + ImageOffset) / 2.0f) / (pageWidth + ImageOffset)) + 1;
         self.pageControl.currentPage = page;
+        
+        CGFloat height = 30;
+        CGFloat width = self.frame.size.width;
+        CGRect pageControlRect = CGRectMake(scrollView.contentOffset.x,
+                                            5,
+                                            width,
+                                            height);
+        
+        self.pageControl.frame = pageControlRect;
     }
 }
 
@@ -153,6 +164,7 @@ const CGFloat ImageOffset = 0;
     imagesFrame.origin.x = imagesFrame.size.width * pageControl.currentPage;
     imagesFrame.origin.y = 0;
     [self scrollRectToVisible:imagesFrame animated:YES];
+    
 }
 
 #pragma mark - Setters
@@ -203,24 +215,50 @@ const CGFloat ImageOffset = 0;
     self.pageControl = nil;
     
     CGFloat height = 30;
-    CGFloat width = self.superview.frame.size.width;
+    CGFloat width = self.frame.size.width;
+    CGRect pageControlRect = CGRectMake(0,
+                                        5,
+                                        width,
+                                        height);
     
-    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0,
-                                                                       5,
-                                                                       width,
-                                                                       height)];
-    
+    self.pageControl = [[UIPageControl alloc] initWithFrame:pageControlRect];
     self.pageControl.numberOfPages = [self proxyData].count;
     self.pageControl.currentPage = 0;
     self.pageControl.hidesForSinglePage = YES;
     self.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     self.pageControl.pageIndicatorTintColor = [UIColor darkGrayColor];
     [self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
-    [self.superview addSubview:self.pageControl];
+    [self addSubview:self.pageControl];
+}
+
+
+#pragma mark - Parallax
+
+- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView;
+{
+    [scrollView setParallaxHeaderView:self
+                                 mode:VGParallaxHeaderModeTopFill
+                               height:300];
+}
+
+- (void)scrollViewScrolled:(UIScrollView *)scrollView;
+{
+    [scrollView shouldPositionParallaxHeader];
 }
 
 
 @end
+
+
+
+
+
+
+
+
+
+
+
 
 
 
