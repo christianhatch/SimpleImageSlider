@@ -26,7 +26,7 @@
                         [UIImage imageNamed:@"image5"]];
     
     self.header = [SimpleImageSlider imageSliderWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300) images:images];
-    [self.header addParallaxToScrollView:self.tableView];
+    [self.header addParallaxToScrollView:self.tableView height:300];
     
 }
 
