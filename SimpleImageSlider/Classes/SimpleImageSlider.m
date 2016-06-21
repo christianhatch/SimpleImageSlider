@@ -49,6 +49,13 @@ const CGFloat ImageOffset = 0;
     return slider;
 }
 
++ (instancetype)imageSliderWithFrame:(CGRect)frame views:(NSArray<UIView *> *)views;
+{
+    SimpleImageSlider *slider = [[SimpleImageSlider alloc] initWithFrame:frame];
+    slider.customViews = views;
+    return slider;
+}
+
 - (instancetype)init
 {
     self = [super initWithFrame:CGRectZero];
@@ -114,22 +121,34 @@ const CGFloat ImageOffset = 0;
                                       width - ImageOffset - ImageOffset,
                                       height);
         
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:imageSize];
-        imgView.contentMode = UIViewContentModeScaleAspectFill;
-        imgView.clipsToBounds = YES;
-        imgView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0.83 alpha:1];
-        imgView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-        [self addSubview:imgView];
-        
-        if ([self proxyData] == self.images) {
-            //get image
-            UIImage *image = self.images[i];
-            [imgView setImageAnimated:image];
+        if ([self proxyData] == self.customViews) {
+            
+            UIView *view = self.customViews[i];
+            view.frame = imageSize;
+            view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+            view.clipsToBounds = YES;
+            [self addSubview:view];
         }
-        else if ([self proxyData] == self.imageURLs) {
-            //get imageurl
-            NSURL *imageURL = self.imageURLs[i];
-            [imgView setImageAnimatedWithURL:imageURL placeholder:nil];
+        else {
+            
+            UIImageView *imgView = [[UIImageView alloc] initWithFrame:imageSize];
+            imgView.contentMode = UIViewContentModeScaleAspectFill;
+            imgView.clipsToBounds = YES;
+            imgView.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0.83 alpha:1];
+            imgView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+            [self addSubview:imgView];
+            
+            if ([self proxyData] == self.images) {
+                //get image
+                UIImage *image = self.images[i];
+                [imgView setImageAnimated:image];
+            }
+            else if ([self proxyData] == self.imageURLs) {
+                //get imageurl
+                NSURL *imageURL = self.imageURLs[i];
+                [imgView setImageAnimatedWithURL:imageURL placeholder:nil];
+            }
+            
         }
         
     }
@@ -190,14 +209,28 @@ const CGFloat ImageOffset = 0;
     }
 }
 
+- (void)setCustomViews:(NSArray<UIView *> *)customViews
+{
+    if (_customViews != customViews) {
+        _customViews = customViews;
+        
+        [self updateUI];
+        [self setupPageControl];
+    }
+}
+
 #pragma mark - Getters
 
-- (NSArray *)proxyData {
+- (NSArray *)proxyData
+{
     if (self.images != nil) {
         return self.images;
     }
     if (self.imageURLs != nil) {
         return self.imageURLs;
+    }
+    if (self.customViews != nil) {
+        return self.customViews;
     }
     return nil;
 }
@@ -228,6 +261,15 @@ const CGFloat ImageOffset = 0;
 
 
 #pragma mark - Parallax
+
+- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView aspectRatio:(CGFloat)aspectRatio minHeight:(CGFloat)minHeight maxHeight:(CGFloat)maxHeight;
+{
+    CGFloat desiredHeight = scrollView.bounds.size.width * aspectRatio;
+    CGFloat finalHeight = MIN(desiredHeight, maxHeight);
+    finalHeight = MAX(finalHeight, minHeight);
+    
+    [self addParallaxToScrollView:scrollView height:finalHeight];
+}
 
 - (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView height:(CGFloat)height;
 {
@@ -282,7 +324,7 @@ const CGFloat ImageOffset = 0;
     [self setImageWithURLRequest:request
                 placeholderImage:placeholder
                          success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) { [weakSelf setImageAnimated:image]; }
-                         failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) { [weakSelf setImageAnimated:nil]; }];
+                         failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) { [weakSelf setImageAnimated:placeholder]; }];
 }
 
 @end
