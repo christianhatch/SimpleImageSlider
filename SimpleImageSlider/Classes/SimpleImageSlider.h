@@ -41,7 +41,7 @@
  *  @return A new intialized SimpleImageSlider.
  */
 + (nonnull instancetype)imageSliderWithFrame:(CGRect)frame
-                                   customViews:(nullable NSArray<UIView *> *)customViews;
+                                 customViews:(nullable NSArray<UIView *> *)customViews;
 
 /**
  An array of images used to populate the image scroller. Nil if the SimpleImageSlider was not created with images.

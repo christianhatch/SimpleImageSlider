@@ -35,24 +35,27 @@ const CGFloat ImageOffset = 0;
 
 #pragma mark - Initialization
 
-+ (instancetype)imageSliderWithFrame:(CGRect)frame imageURLs:(NSArray *)imageURLs
++ (instancetype)imageSliderWithFrame:(CGRect)frame
+                           imageURLs:(NSArray *)imageURLs
 {
     SimpleImageSlider *slider = [[SimpleImageSlider alloc] initWithFrame:frame];
     slider.imageURLs = imageURLs;
     return slider;
 }
 
-+ (instancetype)imageSliderWithFrame:(CGRect)frame images:(NSArray<UIImage *> *)images
++ (instancetype)imageSliderWithFrame:(CGRect)frame
+                              images:(NSArray<UIImage *> *)images
 {
     SimpleImageSlider *slider = [[SimpleImageSlider alloc] initWithFrame:frame];
     slider.images = images;
     return slider;
 }
 
-+ (instancetype)imageSliderWithFrame:(CGRect)frame views:(NSArray<UIView *> *)views;
++ (nonnull instancetype)imageSliderWithFrame:(CGRect)frame
+                                 customViews:(nullable NSArray<UIView *> *)customViews;
 {
     SimpleImageSlider *slider = [[SimpleImageSlider alloc] initWithFrame:frame];
-    slider.customViews = views;
+    slider.customViews = customViews;
     return slider;
 }
 
