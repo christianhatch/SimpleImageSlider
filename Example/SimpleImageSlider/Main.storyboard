@@ -203,11 +203,11 @@
             </objects>
             <point key="canvasLocation" x="273" y="769"/>
         </scene>
-        <!--Images-->
+        <!--Custom Views-->
         <scene sceneID="rrR-Di-zCV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xE0-pi-tQ8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Images" id="7AD-WF-eAK"/>
+                    <tabBarItem key="tabBarItem" title="Custom Views" id="7AD-WF-eAK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FoL-rE-fgj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
