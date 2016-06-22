@@ -29,7 +29,7 @@
         [views addObject:[[UIImageView alloc] initWithImage:image]];
     }
     
-    SimpleImageSlider *slider = [SimpleImageSlider imageSliderWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300) views:views];
+    SimpleImageSlider *slider = [SimpleImageSlider imageSliderWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300) customViews:views];
     self.tableView.tableHeaderView = slider;
 }
 
