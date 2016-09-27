@@ -28,6 +28,7 @@ const CGFloat ImageOffset = 0;
 
 @interface SimpleImageSlider () <UIScrollViewDelegate>
 @property (nonatomic, strong) UIPageControl *pageControl;
+@property (nonatomic, strong) NSTimer *slideshowTimer;
 @end
 
 
@@ -92,6 +93,7 @@ const CGFloat ImageOffset = 0;
     self.showsHorizontalScrollIndicator = NO;
     self.backgroundColor = [UIColor clearColor];
     self.delegate = self;
+    self.stopsSlideShowOnScroll = YES;
 }
 
 
@@ -107,8 +109,10 @@ const CGFloat ImageOffset = 0;
     }
 
     //first clear out all extant imageviews
-    for (UIView *view in self.subviews) {
-        [view removeFromSuperview];
+    if (self.subviews.count > 0) {
+        for (UIView *view in self.subviews) {
+            [view removeFromSuperview];
+        }
     }
     
     //get sizes
@@ -133,7 +137,6 @@ const CGFloat ImageOffset = 0;
             [self addSubview:view];
         }
         else {
-            
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:imageSize];
             imgView.contentMode = UIViewContentModeScaleAspectFill;
             imgView.clipsToBounds = YES;
@@ -166,10 +169,12 @@ const CGFloat ImageOffset = 0;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (scrollView == self) {
+        //find the new 'current page' and set it on the pageControl
         CGFloat pageWidth = self.frame.size.width;
         NSUInteger page = floor((self.contentOffset.x - (pageWidth + ImageOffset) / 2.0f) / (pageWidth + ImageOffset)) + 1;
         self.pageControl.currentPage = page;
         
+        //resize the pageControl
         CGFloat height = 30;
         CGFloat width = self.frame.size.width;
         CGRect pageControlRect = CGRectMake(scrollView.contentOffset.x,
@@ -181,14 +186,29 @@ const CGFloat ImageOffset = 0;
     }
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    if (self.stopsSlideShowOnScroll) {
+        [self stopSlideShow];
+    }
+}
+
 - (void)changePage:(UIPageControl *)pageControl
 {
     CGRect imagesFrame = self.frame;
     imagesFrame.origin.x = imagesFrame.size.width * pageControl.currentPage;
     imagesFrame.origin.y = 0;
     [self scrollRectToVisible:imagesFrame animated:YES];
-    
 }
+
+- (void)scrollToPage:(NSInteger)page
+{
+    CGRect imagesFrame = self.frame;
+    imagesFrame.origin.x = imagesFrame.size.width * page;
+    imagesFrame.origin.y = 0;
+    [self scrollRectToVisible:imagesFrame animated:YES];
+}
+
 
 #pragma mark - Setters
 
@@ -286,6 +306,25 @@ const CGFloat ImageOffset = 0;
     [scrollView shouldPositionParallaxHeader];
 }
 
+
+
+#pragma mark - Slideshow
+
+- (void)startSlideshowWithTime:(NSTimeInterval)time;
+{
+    self.slideshowTimer = [NSTimer scheduledTimerWithTimeInterval:time target:self selector:@selector(scrollToNextPage) userInfo:nil repeats:YES];
+}
+
+- (void)scrollToNextPage
+{
+    [self scrollToPage:self.pageControl.currentPage + 1];
+}
+
+- (void)stopSlideShow;
+{
+    self.slideshowTimer.invalidate;
+    self.slideshowTimer = nil;
+}
 
 @end
 

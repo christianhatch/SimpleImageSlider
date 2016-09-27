@@ -15,7 +15,7 @@
 
 @implementation CHCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"UICollectionViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,6 +35,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.header = [SimpleImageSlider imageSliderWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300) images:images];
     [self.header addParallaxToScrollView:self.collectionView height:300];
+    
+    [self.header startSlideshowWithTime:5];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -62,41 +64,20 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.backgroundColor = [UIColor lightGrayColor];
 
     UILabel *label = [[UILabel alloc] initWithFrame:cell.bounds];
-    label.text = [NSString stringWithFormat:@"%li, %li", (long)indexPath.section, indexPath.row];
+    label.text = [NSString stringWithFormat:@"%li, %li", (long)indexPath.section, (long)indexPath.row];
     [cell.contentView addSubview:label];
     
     return cell;
 }
 
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
-
 @end
+
+
+
+
+
+
+
+
+
+

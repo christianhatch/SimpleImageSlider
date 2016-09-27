@@ -10,6 +10,9 @@
 
 @interface SimpleImageSlider : UIScrollView
 
+
+#pragma mark - Initializers
+
 /**
  Designated Initializer for images!
  
@@ -43,6 +46,9 @@
 + (nonnull instancetype)imageSliderWithFrame:(CGRect)frame
                                  customViews:(nullable NSArray<UIView *> *)customViews;
 
+
+#pragma mark - Data properties
+
 /**
  An array of images used to populate the image scroller. Nil if the SimpleImageSlider was not created with images.
  */
@@ -59,10 +65,36 @@
 @property (nullable, nonatomic, strong) NSArray<UIView *> *customViews;
 
 
+
+#pragma mark - Slideshow
+
+/**
+ *  Automatically scrolls the SimpleImageSlider to the next page every [time] seconds. This method is great for when you need a slideshow, and for when you want to give the user an indication that the SimpleImageSlider is scrollable.
+ *
+ *  @param time The amount of time to wait before scrolling to the next image.
+ */
+- (void)startSlideshowWithTime:(NSTimeInterval)time;
+
+/**
+ *  Stops the automatic scrolling slideshow.
+ */
+- (void)stopSlideShow;
+
+/**
+ If set to YES, the SimpleImageSlider will stop the automatic scrolling slideshow (if it is running) when the user scrolls the SimpleImageSlider. Useful for when you are using the slideshow feature as an indication that the SimpleImageSlider is scrollable. Set to NO to only stop the slideshow when calling - (void)stopSlideShow;
+    Default is YES.
+ */
+@property (nonatomic) BOOL stopsSlideShowOnScroll;
+
+
+
+#pragma mark - Parallax
+
 /**
  *  Adds a parallax effect when scrolling in the scrollview. Use this method to add the effect with a fixed height.
  *
  *  @param scrollView The scrollview to which the parallax effect should be added.
+ *  @param height The desired height of the SimpleImageSlider.
  */
 - (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView height:(CGFloat)height;
 
