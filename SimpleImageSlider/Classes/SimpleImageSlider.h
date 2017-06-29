@@ -39,7 +39,7 @@
  *  Designated Initializer for custom views. This is useful for when you have a custom view that you want to laid out in the gallery.
  *
  *  @param frame The frame of the SimpleImageSlider.
- *  @param views The custom views with which to populate the SimpleImageSlider.
+ *  @param customViews The custom views with which to populate the SimpleImageSlider.
  *
  *  @return A new intialized SimpleImageSlider.
  */
