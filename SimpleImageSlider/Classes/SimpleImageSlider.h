@@ -28,7 +28,7 @@
  Designated Initializer for image URLs!
  
  @param frame  The frame of the SimpleImageSlider.
- @param images The urls of the images to be set on the SimpleImageSlider
+ @param imageURLs The urls of the images to be set on the SimpleImageSlider
  
  @return A new intialized SimpleImageSlider.
  */
@@ -106,7 +106,7 @@
  *  @param minHeight   The minimum height that the SimpleImageSlider should be.
  *  @param maxHeight   The maximum height that the SimpleImageSlider should be.
  */
-- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView aspectRatio:(CGFloat)aspectRatio minHeight:(CGFloat)minHeight maxHeight:(CGFloat)maxHeight;
+//- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView aspectRatio:(CGFloat)aspectRatio minHeight:(CGFloat)minHeight maxHeight:(CGFloat)maxHeight;
 
 /**
  *  If the parallax effect has been added (by calling 'addParallaxToScrollView:') then you must call this method as the scroll view scrolls.

@@ -22,6 +22,10 @@ static NSString * const reuseIdentifier = @"UICollectionViewCell";
     
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     self.collectionView.backgroundColor = [UIColor whiteColor];
+}
+    
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     [self setupHeader];
 }

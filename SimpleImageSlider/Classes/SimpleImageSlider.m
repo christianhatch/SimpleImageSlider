@@ -278,6 +278,8 @@ const CGFloat ImageOffset = 0;
     self.pageControl.hidesForSinglePage = YES;
     self.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     self.pageControl.pageIndicatorTintColor = [UIColor darkGrayColor];
+    
+    [self.pageControl removeTarget:nil action:nil forControlEvents:UIControlEventAllEvents];
     [self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
     [self addSubview:self.pageControl];
 }
@@ -285,14 +287,14 @@ const CGFloat ImageOffset = 0;
 
 #pragma mark - Parallax
 
-- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView aspectRatio:(CGFloat)aspectRatio minHeight:(CGFloat)minHeight maxHeight:(CGFloat)maxHeight;
-{
-    CGFloat desiredHeight = scrollView.bounds.size.width * aspectRatio;
-    CGFloat finalHeight = MIN(desiredHeight, maxHeight);
-    finalHeight = MAX(finalHeight, minHeight);
-    
-    [self addParallaxToScrollView:scrollView height:finalHeight];
-}
+//- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView aspectRatio:(CGFloat)aspectRatio minHeight:(CGFloat)minHeight maxHeight:(CGFloat)maxHeight;
+//{
+//    CGFloat desiredHeight = scrollView.bounds.size.width * aspectRatio;
+//    CGFloat finalHeight = MIN(desiredHeight, maxHeight);
+//    finalHeight = MAX(finalHeight, minHeight);
+//    
+//    [self addParallaxToScrollView:scrollView height:finalHeight];
+//}
 
 - (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView height:(CGFloat)height;
 {

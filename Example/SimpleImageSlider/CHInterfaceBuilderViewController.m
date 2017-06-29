@@ -23,10 +23,10 @@
 {
     [super viewDidAppear:animated];
     
-    [self setupHeader];
+    [self setupTheHeader];
 }
 
-- (void)setupHeader {
+- (void)setupTheHeader {
     NSArray *images = @[[UIImage imageNamed:@"image1"],
                         [UIImage imageNamed:@"image2"],
                         [UIImage imageNamed:@"image3"],
