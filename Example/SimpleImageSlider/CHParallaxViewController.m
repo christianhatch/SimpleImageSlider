@@ -18,7 +18,12 @@
 
 @implementation CHParallaxViewController
 
-- (void)setupHeader {
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self setupTheHeader];
+}
+    
+- (void)setupTheHeader {
     NSArray *images = @[[UIImage imageNamed:@"image1"],
                         [UIImage imageNamed:@"image2"],
                         [UIImage imageNamed:@"image3"],
@@ -26,9 +31,7 @@
                         [UIImage imageNamed:@"image5"]];
     
     self.header = [SimpleImageSlider imageSliderWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300) images:images];
-    [self.header addParallaxToScrollView:self.tableView aspectRatio:1 minHeight:200 maxHeight:300];
-    
-//    [self.header addParallaxToScrollView:self.tableView height:300];
+    [self.header addParallaxToScrollView:self.tableView height:300];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
