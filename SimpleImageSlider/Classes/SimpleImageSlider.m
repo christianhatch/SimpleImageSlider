@@ -324,7 +324,7 @@ const CGFloat ImageOffset = 0;
 
 - (void)stopSlideShow;
 {
-    self.slideshowTimer.invalidate;
+    [self.slideshowTimer invalidate];
     self.slideshowTimer = nil;
 }
 
