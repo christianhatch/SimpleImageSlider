@@ -4,11 +4,4 @@ target 'SimpleImageSlider_Example' do
   pod 'SimpleImageSlider', :path => '../'
   pod 'AFNetworking'
   pod 'PureLayout'
-
-  
-  target 'SimpleImageSlider_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
