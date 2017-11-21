@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'SimpleImageSlider'
-    s.version          = '0.6.1'
+    s.version          = '1.0.0'
     s.summary          = 'SimpleImageSlider is a simple view that creates a scrollable gallery of images.'
 
     s.description      = <<-DESC
@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
     DESC
 
     s.homepage         = 'https://github.com/christianhatch/SimpleImageSlider'
-    # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'Christian Hatch' => 'christianhatch@gmail.com' }
     s.source           = { :git => 'https://github.com/christianhatch/SimpleImageSlider.git', :tag => s.version.to_s }

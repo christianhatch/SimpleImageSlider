@@ -7,7 +7,10 @@
 //
 
 #import "SimpleImageSlider.h"
+#import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import <AFNetworking/AFURLResponseSerialization.h>
+#import <AFNetworking/AFImageDownloader.h>
 #import "UIScrollView+VGParallaxHeader.h"
 
 
@@ -364,6 +367,9 @@ const CGFloat ImageOffset = 0;
 {
     __block UIImageView *weakSelf = self;
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:imageURL];
+
+    AFImageResponseSerializer *serializer = (AFImageResponseSerializer *)[UIImageView sharedImageDownloader].sessionManager.responseSerializer;
+    serializer.acceptableContentTypes = [serializer.acceptableContentTypes setByAddingObject:@"image/jpg"];
 
     [self setImageWithURLRequest:request
                 placeholderImage:placeholder
