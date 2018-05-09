@@ -204,12 +204,12 @@ const CGFloat ImageOffset = 0;
     [self scrollRectToVisible:imagesFrame animated:YES];
 }
 
-- (void)scrollToPage:(NSInteger)page
+- (void)scrollToPage:(NSInteger)page animated:(BOOL)animated
 {
     CGRect imagesFrame = self.frame;
     imagesFrame.origin.x = imagesFrame.size.width * page;
     imagesFrame.origin.y = 0;
-    [self scrollRectToVisible:imagesFrame animated:YES];
+    [self scrollRectToVisible:imagesFrame animated:animated];
 }
 
 
@@ -330,7 +330,7 @@ const CGFloat ImageOffset = 0;
     if (self.pageControl.currentPage == [self proxyData].count - 1) {
         nextPage = 0;
     }
-    [self scrollToPage:nextPage];
+    [self scrollToPage:nextPage animated:YES];
 }
 
 - (void)stopSlideShow;

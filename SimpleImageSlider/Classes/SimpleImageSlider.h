@@ -57,6 +57,14 @@
  */
 @property (nonatomic) NSInteger currentPageIndex;
 
+/**
+ *  Scrolls to the given page index.
+ *
+ *  @param page The index of the image to scroll to.
+ *
+ */
+- (void)scrollToPage:(NSInteger)page animated:(BOOL)animated;
+
 #pragma mark - Data properties
 
 /**
