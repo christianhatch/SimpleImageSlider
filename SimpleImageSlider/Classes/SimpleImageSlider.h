@@ -46,6 +46,11 @@
 + (nonnull instancetype)imageSliderWithFrame:(CGRect)frame
                                  customViews:(nullable NSArray<UIView *> *)customViews;
 
+/**
+ Determines whether or not the SimpleImageSlider shows page indicators.
+ */
+
+@property (nonatomic) BOOL showsPageIndicators;
 
 #pragma mark - Data properties
 

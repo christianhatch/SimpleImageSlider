@@ -97,6 +97,7 @@ const CGFloat ImageOffset = 0;
     self.backgroundColor = [UIColor clearColor];
     self.delegate = self;
     self.stopsSlideShowOnScroll = YES;
+    self.showsPageIndicators = YES;
 }
 
 
@@ -245,6 +246,14 @@ const CGFloat ImageOffset = 0;
     }
 }
 
+- (void)setShowsPageIndicators:(BOOL)showsPageIndicators
+{
+    if (_showsPageIndicators != showsPageIndicators) {
+        _showsPageIndicators = showsPageIndicators;
+        [self setupPageControl];
+    }
+}
+
 #pragma mark - Getters
 
 - (NSArray *)proxyData
@@ -268,36 +277,29 @@ const CGFloat ImageOffset = 0;
     [self.pageControl removeFromSuperview];
     self.pageControl = nil;
     
-    CGFloat height = 30;
-    CGFloat width = self.frame.size.width;
-    CGRect pageControlRect = CGRectMake(0,
-                                        5,
-                                        width,
-                                        height);
-    
-    self.pageControl = [[UIPageControl alloc] initWithFrame:pageControlRect];
-    self.pageControl.numberOfPages = [self proxyData].count;
-    self.pageControl.currentPage = 0;
-    self.pageControl.hidesForSinglePage = YES;
-    self.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
-    self.pageControl.pageIndicatorTintColor = [UIColor darkGrayColor];
-    
-    [self.pageControl removeTarget:nil action:nil forControlEvents:UIControlEventAllEvents];
-    [self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
-    [self addSubview:self.pageControl];
+    if (self.showsPageIndicators) {
+        CGFloat height = 30;
+        CGFloat width = self.frame.size.width;
+        CGRect pageControlRect = CGRectMake(0,
+                                            5,
+                                            width,
+                                            height);
+        
+        self.pageControl = [[UIPageControl alloc] initWithFrame:pageControlRect];
+        self.pageControl.numberOfPages = [self proxyData].count;
+        self.pageControl.currentPage = 0;
+        self.pageControl.hidesForSinglePage = YES;
+        self.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+        self.pageControl.pageIndicatorTintColor = [UIColor darkGrayColor];
+        
+        [self.pageControl removeTarget:nil action:nil forControlEvents:UIControlEventAllEvents];
+        [self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
+        [self addSubview:self.pageControl];
+    }
 }
 
 
 #pragma mark - Parallax
-
-//- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView aspectRatio:(CGFloat)aspectRatio minHeight:(CGFloat)minHeight maxHeight:(CGFloat)maxHeight;
-//{
-//    CGFloat desiredHeight = scrollView.bounds.size.width * aspectRatio;
-//    CGFloat finalHeight = MIN(desiredHeight, maxHeight);
-//    finalHeight = MAX(finalHeight, minHeight);
-//    
-//    [self addParallaxToScrollView:scrollView height:finalHeight];
-//}
 
 - (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView height:(CGFloat)height;
 {
