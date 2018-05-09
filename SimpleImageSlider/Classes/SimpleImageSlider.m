@@ -39,7 +39,7 @@ const CGFloat ImageOffset = 0;
 
 #pragma mark - Initialization
 
-+ (instancetype)imageSliderWithFrame:(CGRect)frame
++ (nonnull instancetype)imageSliderWithFrame:(CGRect)frame
                            imageURLs:(NSArray *)imageURLs
 {
     SimpleImageSlider *slider = [[SimpleImageSlider alloc] initWithFrame:frame];
@@ -47,7 +47,7 @@ const CGFloat ImageOffset = 0;
     return slider;
 }
 
-+ (instancetype)imageSliderWithFrame:(CGRect)frame
++ (nonnull instancetype)imageSliderWithFrame:(CGRect)frame
                               images:(NSArray<UIImage *> *)images
 {
     SimpleImageSlider *slider = [[SimpleImageSlider alloc] initWithFrame:frame];
@@ -139,8 +139,7 @@ const CGFloat ImageOffset = 0;
             view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
             view.clipsToBounds = YES;
             [self addSubview:view];
-        }
-        else {
+        } else {
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:imageSize];
             imgView.contentMode = UIViewContentModeScaleAspectFill;
             imgView.clipsToBounds = YES;
@@ -275,7 +274,6 @@ const CGFloat ImageOffset = 0;
 - (void)setupPageControl
 {
     [self.pageControl removeFromSuperview];
-    self.pageControl = nil;
     
     if (self.showsPageIndicators) {
         CGFloat height = 30;
@@ -324,7 +322,11 @@ const CGFloat ImageOffset = 0;
 
 - (void)scrollToNextPage
 {
-    [self scrollToPage:self.pageControl.currentPage + 1];
+    NSInteger nextPage = self.pageControl.currentPage + 1;
+    if (self.pageControl.currentPage == [self proxyData].count - 1) {
+        nextPage = 0;
+    }
+    [self scrollToPage:nextPage];
 }
 
 - (void)stopSlideShow;

@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'SimpleImageSlider'
-    s.version          = '1.0.2'
+    s.version          = '1.0.3'
     s.summary          = 'SimpleImageSlider is a simple view that creates a scrollable gallery of images.'
 
     s.description      = <<-DESC
