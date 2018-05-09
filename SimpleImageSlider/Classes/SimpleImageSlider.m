@@ -269,6 +269,10 @@ const CGFloat ImageOffset = 0;
     return nil;
 }
 
+- (NSInteger)currentPageIndex {
+    return self.pageControl.currentPage;
+}
+
 #pragma mark - Private Methods
 
 - (void)setupPageControl

@@ -52,6 +52,11 @@
 
 @property (nonatomic) BOOL showsPageIndicators;
 
+/**
+ The index of the current photo being displayed.
+ */
+@property (nonatomic) NSInteger currentPageIndex;
+
 #pragma mark - Data properties
 
 /**
