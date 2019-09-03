@@ -1,38 +1,24 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
-  - PureLayout (3.0.2)
-  - SimpleImageSlider (0.2.1):
-    - AFNetworking
+  - PureLayout (3.1.4)
+  - SimpleImageSlider (2.0.0):
     - PureLayout
 
 DEPENDENCIES:
-  - AFNetworking
   - PureLayout
   - SimpleImageSlider (from `../`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PureLayout
+
 EXTERNAL SOURCES:
   SimpleImageSlider:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  SimpleImageSlider: 4dee542a2464a0f987cf019dee03ccfe246345bd
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
+  SimpleImageSlider: a34ff2f57bc4f8ccb490da7bff448dcc5f405915
 
-PODFILE CHECKSUM: 387c6572e475db66295179ab45f589ebdd1d4010
+PODFILE CHECKSUM: c833a07a9fd1cc724965961df70e1fc77d100796
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.7.5

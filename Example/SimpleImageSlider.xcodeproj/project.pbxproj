@@ -28,7 +28,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		902E2E071243F2EF3B1EFE83 /* Pods_SimpleImageSlider_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DD54E0BA41ED02C00622BF /* Pods_SimpleImageSlider_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +51,8 @@
 		457D58A71CFE06650012C387 /* CHImageURLsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHImageURLsViewController.m; sourceTree = "<group>"; };
 		457D58AB1CFE066F0012C387 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		457D58AD1CFE078A0012C387 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		45947A9AC9911BA930EB0F6A /* Pods-SimpleImageSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleImageSlider_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleImageSlider_Tests/Pods-SimpleImageSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		45C7B79C1D131F7000895F7D /* CHParallaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHParallaxViewController.h; sourceTree = "<group>"; };
 		45C7B79D1D131F7000895F7D /* CHParallaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHParallaxViewController.m; sourceTree = "<group>"; };
-		45DD54E0BA41ED02C00622BF /* Pods_SimpleImageSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleImageSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FC812C1CFE520200CC8390 /* CHInterfaceBuilderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHInterfaceBuilderViewController.h; sourceTree = "<group>"; };
 		45FC812D1CFE520200CC8390 /* CHInterfaceBuilderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHInterfaceBuilderViewController.m; sourceTree = "<group>"; };
 		45FC812F1CFE528F00CC8390 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
@@ -80,7 +77,6 @@
 		719C860744E1E5ADAE2C2999 /* Pods_SimpleImageSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleImageSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CC7ABAECE5FACB944A4748 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8726EBAF9E72830BC9151FE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		C3B7979E822B748145FE7ADB /* Pods-SimpleImageSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleImageSlider_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleImageSlider_Tests/Pods-SimpleImageSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E80D53E9AEC00B3D00500393 /* Pods-SimpleImageSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleImageSlider_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleImageSlider_Example/Pods-SimpleImageSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +99,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				902E2E071243F2EF3B1EFE83 /* Pods_SimpleImageSlider_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +134,6 @@
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				719C860744E1E5ADAE2C2999 /* Pods_SimpleImageSlider_Example.framework */,
-				45DD54E0BA41ED02C00622BF /* Pods_SimpleImageSlider_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -215,8 +209,6 @@
 			children = (
 				532F7755AC2496EBCAB25187 /* Pods-SimpleImageSlider_Example.debug.xcconfig */,
 				E80D53E9AEC00B3D00500393 /* Pods-SimpleImageSlider_Example.release.xcconfig */,
-				C3B7979E822B748145FE7ADB /* Pods-SimpleImageSlider_Tests.debug.xcconfig */,
-				45947A9AC9911BA930EB0F6A /* Pods-SimpleImageSlider_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -228,12 +220,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "SimpleImageSlider_Example" */;
 			buildPhases = (
+				1A12C9B77CD6D87ED027C53F /* [CP] Check Pods Manifest.lock */,
 				E7B37FDBC61C7EFC707573BE /* 📦 Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				7FE60C7948F093B44453F0DA /* 📦 Embed Pods Frameworks */,
-				4427EA31533C13DB153ED98B /* 📦 Copy Pods Resources */,
+				B70CDE87E406C680E1BEFDBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,12 +241,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "SimpleImageSlider_Tests" */;
 			buildPhases = (
-				8D19B2637F281098C3C0AAC1 /* 📦 Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				20FA9FB530E2CB1AB27E84EA /* 📦 Embed Pods Frameworks */,
-				ADC692F322FA3B2A749CDA66 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -325,34 +315,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20FA9FB530E2CB1AB27E84EA /* 📦 Embed Pods Frameworks */ = {
+		1A12C9B77CD6D87ED027C53F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleImageSlider_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleImageSlider_Tests/Pods-SimpleImageSlider_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4427EA31533C13DB153ED98B /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleImageSlider_Example/Pods-SimpleImageSlider_Example-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7FE60C7948F093B44453F0DA /* 📦 Embed Pods Frameworks */ = {
@@ -370,34 +352,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleImageSlider_Example/Pods-SimpleImageSlider_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8D19B2637F281098C3C0AAC1 /* 📦 Check Pods Manifest.lock */ = {
+		B70CDE87E406C680E1BEFDBD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleImageSlider_Example/Pods-SimpleImageSlider_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleImageSlider/SimpleImageSlider.framework",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleImageSlider.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		ADC692F322FA3B2A749CDA66 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleImageSlider_Tests/Pods-SimpleImageSlider_Tests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleImageSlider_Example/Pods-SimpleImageSlider_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E7B37FDBC61C7EFC707573BE /* 📦 Check Pods Manifest.lock */ = {
@@ -606,7 +578,6 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3B7979E822B748145FE7ADB /* Pods-SimpleImageSlider_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -630,7 +601,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45947A9AC9911BA930EB0F6A /* Pods-SimpleImageSlider_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -1,30 +1,29 @@
 //
-//  UIScrollView+VGParallaxHeader.m
+//  UIScrollView+ParallaxHeader.m
 //
 //  Created by Marek Serafin on 2014-09-18.
 //  Copyright (c) 2013 VG. All rights reserved.
 //
 
-#import "UIScrollView+VGParallaxHeader.h"
-
+#import "UIScrollView+ParallaxHeader.h"
 #import <objc/runtime.h>
 #import <QuartzCore/QuartzCore.h>
 #import <PureLayout/PureLayout.h>
 
-static char UIScrollViewVGParallaxHeader;
-static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
+static char UIScrollViewParallaxHeader;
+static void *ParallaxHeaderObserverContext = &ParallaxHeaderObserverContext;
 
-#pragma mark - VGParallaxHeader (Interface)
-@interface VGParallaxHeader ()
+#pragma mark - ParallaxHeader (Interface)
+@interface ParallaxHeader ()
 
 - (instancetype)initWithScrollView:(UIScrollView *)scrollView
                        contentView:(UIView *)view
-                              mode:(VGParallaxHeaderMode)mode
+                              mode:(ParallaxHeaderMode)mode
                             height:(CGFloat)height;
 
 @property (nonatomic, assign, readwrite, getter=isInsideTableView) BOOL insideTableView;
 
-@property (nonatomic, assign, readwrite) VGParallaxHeaderMode mode;
+@property (nonatomic, assign, readwrite) ParallaxHeaderMode mode;
 
 @property (nonatomic, strong, readwrite) UIView *containerView;
 @property (nonatomic, strong, readwrite) UIView *contentView;
@@ -46,12 +45,12 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
 @end
 
 #pragma mark - UIScrollView (Implementation)
-@implementation UIScrollView (VGParallaxHeader)
+@implementation UIScrollView (ParallaxHeader)
 
 - (void)setParallaxHeaderView:(UIView *)view
-                         mode:(VGParallaxHeaderMode)mode
+                         mode:(ParallaxHeaderMode)mode
                        height:(CGFloat)height
-                  shadowBehaviour:(VGParallaxHeaderShadowBehaviour)shadowBehaviour
+                  shadowBehaviour:(ParallaxHeaderShadowBehaviour)shadowBehaviour
 {
     [self setParallaxHeaderView:view
                            mode:mode
@@ -59,11 +58,11 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
 }
 
 - (void)setParallaxHeaderView:(UIView *)view
-                         mode:(VGParallaxHeaderMode)mode
+                         mode:(ParallaxHeaderMode)mode
                        height:(CGFloat)height
 {
-    // New VGParallaxHeader
-    self.parallaxHeader = [[VGParallaxHeader alloc] initWithScrollView:self
+    // New ParallaxHeader
+    self.parallaxHeader = [[ParallaxHeader alloc] initWithScrollView:self
                                                            contentView:view
                                                                   mode:mode
                                                                 height:height];
@@ -86,7 +85,7 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
     [self addObserver:self.parallaxHeader
            forKeyPath:NSStringFromSelector(@selector(contentInset))
               options:NSKeyValueObservingOptionNew
-              context:VGParallaxHeaderObserverContext];
+              context:ParallaxHeaderObserverContext];
 }
 
 - (void)updateParallaxHeaderViewHeight:(CGFloat)height
@@ -127,9 +126,9 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
     if (self.contentOffset.y < self.parallaxHeader.originalHeight) {
         // We can move height to if here because its uitableview
         CGFloat height = self.contentOffset.y * -1 + self.parallaxHeader.originalHeight;
-        // Im not 100% sure if this will only speed up VGParallaxHeaderModeCenter
+        // Im not 100% sure if this will only speed up ParallaxHeaderModeCenter
         // but on other modes it can be visible. 0.5px
-        if (self.parallaxHeader.mode == VGParallaxHeaderModeCenter) {
+        if (self.parallaxHeader.mode == ParallaxHeaderModeCenter) {
             height = round(height);
         }
         // This is where the magic is happening
@@ -149,12 +148,12 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
     }
 }
 
-- (void)setParallaxHeader:(VGParallaxHeader *)parallaxHeader
+- (void)setParallaxHeader:(ParallaxHeader *)parallaxHeader
 {
     // Remove All Subviews
     if([self.subviews count] > 0) {
         [self.subviews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            if([obj isMemberOfClass:[VGParallaxHeader class]]) {
+            if([obj isMemberOfClass:[ParallaxHeader class]]) {
                 [obj removeFromSuperview];
             }
         }];
@@ -172,18 +171,18 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
     }
     
     // Set Associated Object
-    objc_setAssociatedObject(self, &UIScrollViewVGParallaxHeader, parallaxHeader, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &UIScrollViewParallaxHeader, parallaxHeader, OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (VGParallaxHeader *)parallaxHeader
+- (ParallaxHeader *)parallaxHeader
 {
-    return objc_getAssociatedObject(self, &UIScrollViewVGParallaxHeader);
+    return objc_getAssociatedObject(self, &UIScrollViewParallaxHeader);
 }
 
 @end
 
-#pragma mark - VGParallaxHeader (Implementation)
-@implementation VGParallaxHeader
+#pragma mark - ParallaxHeader (Implementation)
+@implementation ParallaxHeader
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -199,7 +198,7 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
 
 - (instancetype)initWithScrollView:(UIScrollView *)scrollView
                        contentView:(UIView *)view
-                              mode:(VGParallaxHeaderMode)mode
+                              mode:(ParallaxHeaderMode)mode
                             height:(CGFloat)height
 {
     self = [super initWithFrame:CGRectMake(0, 0, CGRectGetWidth(scrollView.bounds), height)];
@@ -247,16 +246,16 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
 - (void)setupContentViewMode
 {
     switch (self.mode) {
-        case VGParallaxHeaderModeFill:
+        case ParallaxHeaderModeFill:
             [self addContentViewModeFillConstraints];
             break;
-        case VGParallaxHeaderModeTop:
+        case ParallaxHeaderModeTop:
             [self addContentViewModeTopConstraints];
             break;
-        case VGParallaxHeaderModeTopFill:
+        case ParallaxHeaderModeTopFill:
             [self addContentViewModeTopFillConstraints];
             break;
-        case VGParallaxHeaderModeCenter:
+        case ParallaxHeaderModeCenter:
         default:
             [self addContentViewModeCenterConstraints];
             break;
@@ -268,25 +267,25 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
                         change:(NSDictionary *)change
                        context:(void *)context
 {
-    if ([keyPath isEqualToString:NSStringFromSelector(@selector(contentInset))] && context == VGParallaxHeaderObserverContext) {
+    if ([keyPath isEqualToString:NSStringFromSelector(@selector(contentInset))] && context == ParallaxHeaderObserverContext) {
         UIEdgeInsets edgeInsets = [[change valueForKey:@"new"] UIEdgeInsetsValue];
         
         // If scroll view we need to fix inset (TableView has parallax view in table view header)
         self.originalTopInset = edgeInsets.top - ((!self.isInsideTableView) ? self.originalHeight : 0);
         
         switch (self.mode) {
-            case VGParallaxHeaderModeFill:
+            case ParallaxHeaderModeFill:
                 self.insetAwarePositionConstraint.constant = self.originalTopInset / 2;
                 self.insetAwareSizeConstraint.constant = -self.originalTopInset;
                 break;
-            case VGParallaxHeaderModeTop:
+            case ParallaxHeaderModeTop:
                 self.insetAwarePositionConstraint.constant = self.originalTopInset;
                 break;
-            case VGParallaxHeaderModeTopFill:
+            case ParallaxHeaderModeTopFill:
                 self.insetAwarePositionConstraint.constant = self.originalTopInset;
                 self.insetAwareSizeConstraint.constant = -self.originalTopInset;
                 break;
-            case VGParallaxHeaderModeCenter:
+            case ParallaxHeaderModeCenter:
             default:
                 self.insetAwarePositionConstraint.constant = self.originalTopInset / 2;
                 break;
@@ -307,12 +306,12 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
         if ([self.superview respondsToSelector:@selector(contentInset)]) {
             [self.superview removeObserver:self
                                 forKeyPath:NSStringFromSelector(@selector(contentInset))
-                                   context:VGParallaxHeaderObserverContext];
+                                   context:ParallaxHeaderObserverContext];
         }
     }
 }
 
-#pragma mark - VGParallaxHeader (Auto Layout)
+#pragma mark - ParallaxHeader (Auto Layout)
 - (void)addContentViewModeFillConstraints
 {
     [self.contentView autoPinEdgeToSuperviewEdge:ALEdgeLeft
@@ -378,7 +377,7 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
                                                              withOffset:round(self.originalTopInset/2)];
 }
 
-#pragma mark - VGParallaxHeader (Sticky View)
+#pragma mark - ParallaxHeader (Sticky View)
 - (void)setStickyView:(UIView *)stickyView
 {
     // Make sure it will work with AutLayout
@@ -405,7 +404,7 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
                                                                  toSize:height];
 }
 
-- (void)setStickyViewPosition:(VGParallaxHeaderStickyViewPosition)stickyViewPosition
+- (void)setStickyViewPosition:(ParallaxHeaderStickyViewPosition)stickyViewPosition
 {
     // Set Local Var
     _stickyViewPosition = stickyViewPosition;
@@ -437,10 +436,10 @@ static void *VGParallaxHeaderObserverContext = &VGParallaxHeaderObserverContext;
         // Set Edges
         ALEdge nonStickyEdge;
         switch (self.stickyViewPosition) {
-            case VGParallaxHeaderStickyViewPositionTop:
+            case ParallaxHeaderStickyViewPositionTop:
                 nonStickyEdge = ALEdgeBottom;
                 break;
-            case VGParallaxHeaderStickyViewPositionBottom:
+            case ParallaxHeaderStickyViewPositionBottom:
             default:
                 nonStickyEdge = ALEdgeTop;
                 break;

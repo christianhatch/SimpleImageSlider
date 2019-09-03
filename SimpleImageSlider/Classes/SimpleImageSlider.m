@@ -7,11 +7,7 @@
 //
 
 #import "SimpleImageSlider.h"
-#import <AFNetworking/AFNetworking.h>
-#import <AFNetworking/UIImageView+AFNetworking.h>
-#import <AFNetworking/AFURLResponseSerialization.h>
-#import <AFNetworking/AFImageDownloader.h>
-#import "UIScrollView+VGParallaxHeader.h"
+#import "UIScrollView+ParallaxHeader.h"
 
 
 @interface UIImageView (SimpleImageSlider)
@@ -20,12 +16,6 @@
 - (void)setImageAnimatedWithURL:(NSURL *)imageURL placeholder:(UIImage *)placeholder;
 
 @end
-
-
-
-
-
-
 
 const CGFloat ImageOffset = 0;
 
@@ -157,9 +147,7 @@ const CGFloat ImageOffset = 0;
                 NSURL *imageURL = self.imageURLs[i];
                 [imgView setImageAnimatedWithURL:imageURL placeholder:nil];
             }
-            
         }
-        
     }
     
     CGFloat sizeWidth = ([self proxyData].count * width) + (ImageOffset * [self proxyData].count) - ImageOffset;
@@ -306,7 +294,7 @@ const CGFloat ImageOffset = 0;
 - (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView height:(CGFloat)height;
 {
     [scrollView setParallaxHeaderView:self
-                                 mode:VGParallaxHeaderModeTopFill
+                                 mode:ParallaxHeaderModeTopFill
                                height:height];
 }
 
@@ -314,8 +302,6 @@ const CGFloat ImageOffset = 0;
 {
     [scrollView shouldPositionParallaxHeader];
 }
-
-
 
 #pragma mark - Slideshow
 
@@ -341,25 +327,6 @@ const CGFloat ImageOffset = 0;
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @implementation UIImageView (SimpleImageSlider)
 
 - (void)setImageAnimated:(UIImage *)image
@@ -376,31 +343,31 @@ const CGFloat ImageOffset = 0;
     __block UIImageView *weakSelf = self;
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:imageURL];
 
-    AFImageResponseSerializer *serializer = (AFImageResponseSerializer *)[UIImageView sharedImageDownloader].sessionManager.responseSerializer;
-    serializer.acceptableContentTypes = [serializer.acceptableContentTypes setByAddingObject:@"image/jpg"];
-
-    [self setImageWithURLRequest:request
-                placeholderImage:placeholder
-                         success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) { [weakSelf setImageAnimated:image]; }
-                         failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) { [weakSelf setImageAnimated:placeholder]; }];
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"Failed to load image for url: %@, error: %@", request.URL.absoluteString, error);
+            [weakSelf setImageAnimated:placeholder];
+            return;
+        }
+        
+        if (![response isKindOfClass:[NSHTTPURLResponse class]]) {
+            NSLog(@"Not an NSHTTPURLResponse from %@", request.URL.absoluteString);
+            [weakSelf setImageAnimated:placeholder];
+            return;
+        }
+        
+        NSHTTPURLResponse *httpResponse = ((NSHTTPURLResponse *)response);
+        
+        if (httpResponse.statusCode != 200) {
+            NSLog(@"Bad response status code: %li while loading url %@", (long)httpResponse.statusCode, request.URL.absoluteString);
+            [weakSelf setImageAnimated:placeholder];
+            return;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            [weakSelf setImageAnimated:[UIImage imageWithData:data]];
+        });
+    }] resume];
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
