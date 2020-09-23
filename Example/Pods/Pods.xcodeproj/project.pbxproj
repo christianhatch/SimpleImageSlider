@@ -611,10 +611,11 @@
 			};
 			name = Debug;
 		};
-		33DAED8EBBB564ACC93F6A608F21023B /* Debug */ = {
+		5A607040B6C49A1FBFAFB563FF72E4BE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BBEAA38569E927B9E448139C282E338 /* SimpleImageSlider.debug.xcconfig */;
+			baseConfigurationReference = E00E37B765F80F9AD82F3ACC2A635F20 /* SimpleImageSlider.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -627,7 +628,39 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SimpleImageSlider/SimpleImageSlider-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SimpleImageSlider/SimpleImageSlider-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimpleImageSlider/SimpleImageSlider.modulemap";
+				PRODUCT_MODULE_NAME = SimpleImageSlider;
+				PRODUCT_NAME = SimpleImageSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7932850B4F826547BBAD29C99537E102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BBEAA38569E927B9E448139C282E338 /* SimpleImageSlider.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleImageSlider/SimpleImageSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleImageSlider/SimpleImageSlider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SimpleImageSlider/SimpleImageSlider.modulemap";
 				PRODUCT_MODULE_NAME = SimpleImageSlider;
@@ -706,37 +739,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		8B5EAD514B939330FF3A2554653D1273 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E00E37B765F80F9AD82F3ACC2A635F20 /* SimpleImageSlider.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SimpleImageSlider/SimpleImageSlider-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimpleImageSlider/SimpleImageSlider-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SimpleImageSlider/SimpleImageSlider.modulemap";
-				PRODUCT_MODULE_NAME = SimpleImageSlider;
-				PRODUCT_NAME = SimpleImageSlider;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		A400ADE58586E37CA099C171F116B168 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -828,8 +830,8 @@
 		ADF280139BD21E2F7E55E6B9F5C8835F /* Build configuration list for PBXNativeTarget "SimpleImageSlider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33DAED8EBBB564ACC93F6A608F21023B /* Debug */,
-				8B5EAD514B939330FF3A2554653D1273 /* Release */,
+				7932850B4F826547BBAD29C99537E102 /* Debug */,
+				5A607040B6C49A1FBFAFB563FF72E4BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

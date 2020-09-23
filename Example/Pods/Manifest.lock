@@ -1,6 +1,6 @@
 PODS:
   - PureLayout (3.1.6)
-  - SimpleImageSlider (2.0.0):
+  - SimpleImageSlider (3.0.0):
     - PureLayout
 
 DEPENDENCIES:
@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
-  SimpleImageSlider: a34ff2f57bc4f8ccb490da7bff448dcc5f405915
+  SimpleImageSlider: 4b8fa9fc78bf5782a257cea8941b53d83e8743a8
 
 PODFILE CHECKSUM: ca5790365fc7d5eef756e71a9675dfb23319de0a
 

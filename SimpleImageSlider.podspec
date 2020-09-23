@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.author           = { 'Christian Hatch' => 'christianhatch@gmail.com' }
     s.source           = { :git => 'https://github.com/christianhatch/SimpleImageSlider.git', :tag => s.version.to_s }
     s.social_media_url = 'https://twitter.com/commodoreftp'
-    s.ios.deployment_target = '9.0'
+    s.ios.deployment_target = '12.4'
     s.source_files = 'SimpleImageSlider/Classes/**/*'
     s.dependency 'PureLayout'
 end
