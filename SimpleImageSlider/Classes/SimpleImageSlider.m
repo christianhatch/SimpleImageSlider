@@ -9,21 +9,17 @@
 #import "SimpleImageSlider.h"
 #import "UIScrollView+ParallaxHeader.h"
 
+const CGFloat ImageOffset = 0;
 
 @interface UIImageView (SimpleImageSlider)
-
 - (void)setImageAnimated:(UIImage *)image;
 - (void)setImageAnimatedWithURL:(NSURL *)imageURL placeholder:(UIImage *)placeholder;
-
 @end
-
-const CGFloat ImageOffset = 0;
 
 @interface SimpleImageSlider () <UIScrollViewDelegate>
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) NSTimer *slideshowTimer;
 @end
-
 
 @implementation SimpleImageSlider
 
@@ -90,9 +86,6 @@ const CGFloat ImageOffset = 0;
     self.showsPageIndicators = YES;
 }
 
-
-
-
 #pragma mark - Main Method
 
 - (void)updateUI
@@ -115,7 +108,6 @@ const CGFloat ImageOffset = 0;
     
         //iterate through the imageobjects and create an imageview
     for (int i = 0; i < [self proxyData].count; i++) {
-        
         //create frame size & position
         CGRect imageSize = CGRectMake(i * width + ImageOffset,
                                       0,
@@ -123,7 +115,6 @@ const CGFloat ImageOffset = 0;
                                       height);
         
         if ([self proxyData] == self.customViews) {
-            
             UIView *view = self.customViews[i];
             view.frame = imageSize;
             view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
@@ -153,7 +144,6 @@ const CGFloat ImageOffset = 0;
     CGFloat sizeWidth = ([self proxyData].count * width) + (ImageOffset * [self proxyData].count) - ImageOffset;
     self.contentSize = CGSizeMake(sizeWidth, height);
 }
-
 
 #pragma mark - Scroll View Delegate
 
@@ -199,7 +189,6 @@ const CGFloat ImageOffset = 0;
     imagesFrame.origin.y = 0;
     [self scrollRectToVisible:imagesFrame animated:animated];
 }
-
 
 #pragma mark - Setters
 
@@ -287,7 +276,6 @@ const CGFloat ImageOffset = 0;
         [self addSubview:self.pageControl];
     }
 }
-
 
 #pragma mark - Parallax
 

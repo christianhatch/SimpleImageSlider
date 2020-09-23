@@ -10,7 +10,6 @@
 
 @interface SimpleImageSlider : UIScrollView
 
-
 #pragma mark - Initializers
 
 /**
@@ -82,8 +81,6 @@
  */
 @property (nullable, nonatomic, strong) NSArray<UIView *> *customViews;
 
-
-
 #pragma mark - Slideshow
 
 /**
@@ -103,8 +100,6 @@
     Default is YES.
  */
 @property (nonatomic) BOOL stopsSlideShowOnScroll;
-
-
 
 #pragma mark - Parallax
 
@@ -134,14 +129,3 @@
 - (void)scrollViewScrolled:(nonnull UIScrollView *)scrollView;
 
 @end
-
-
-
-
-
-
-
-
-
-
-
