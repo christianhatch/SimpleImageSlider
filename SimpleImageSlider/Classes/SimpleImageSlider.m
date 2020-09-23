@@ -88,7 +88,7 @@ const CGFloat ImageOffset = 0;
 
 #pragma mark - Main Method
 
-- (void)updateUI
+- (void)render
 {
     //bail if we don't have any data
     if ([self proxyData] == nil) {
@@ -197,7 +197,7 @@ const CGFloat ImageOffset = 0;
     if (_imageURLs != imageURLs) {
         _imageURLs = imageURLs;
         
-        [self updateUI];
+        [self render];
         [self setupPageControl];
     }
 }
@@ -207,7 +207,7 @@ const CGFloat ImageOffset = 0;
     if (_images != images) {
         _images = images;
         
-        [self updateUI];
+        [self render];
         [self setupPageControl];
     }
 }
@@ -217,7 +217,7 @@ const CGFloat ImageOffset = 0;
     if (_customViews != customViews) {
         _customViews = customViews;
         
-        [self updateUI];
+        [self render];
         [self setupPageControl];
     }
 }
@@ -322,7 +322,11 @@ const CGFloat ImageOffset = 0;
     [UIView transitionWithView:self
                       duration:0.25
                        options:UIViewAnimationOptionTransitionCrossDissolve
-                    animations:^{ self.image = image; }
+                    animations:^{
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        self.image = image;
+                                    });
+                                }
                     completion:nil];
 }
 
