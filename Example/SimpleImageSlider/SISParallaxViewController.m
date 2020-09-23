@@ -1,22 +1,21 @@
 //
-//  CHParallaxViewController.m
+//  SISParallaxViewController.m
 //  SimpleImageSlider
 //
 //  Created by Christian Hatch on 6/16/16.
 //  Copyright © 2016 Christian Hatch. All rights reserved.
 //
 
-#import "CHParallaxViewController.h"
+#import "SISParallaxViewController.h"
 #import <SimpleImageSlider/SimpleImageSlider.h>
 
-@interface CHParallaxViewController () <UIScrollViewDelegate>
-
+@interface SISParallaxViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) SimpleImageSlider *header;
 @end
 
 
-@implementation CHParallaxViewController
+@implementation SISParallaxViewController
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];

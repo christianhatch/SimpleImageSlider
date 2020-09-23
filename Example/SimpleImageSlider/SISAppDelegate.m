@@ -1,14 +1,14 @@
 //
-//  CHAppDelegate.m
+//  SISAppDelegate.m
 //  SimpleImageSlider
 //
 //  Created by Christian Hatch on 05/31/2016.
 //  Copyright (c) 2016 Christian Hatch. All rights reserved.
 //
 
-#import "CHAppDelegate.h"
+#import "SISAppDelegate.h"
 
-@implementation CHAppDelegate
+@implementation SISAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

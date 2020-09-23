@@ -9,21 +9,17 @@
 #import "SimpleImageSlider.h"
 #import "UIScrollView+ParallaxHeader.h"
 
+const CGFloat ImageOffset = 0;
 
 @interface UIImageView (SimpleImageSlider)
-
 - (void)setImageAnimated:(UIImage *)image;
 - (void)setImageAnimatedWithURL:(NSURL *)imageURL placeholder:(UIImage *)placeholder;
-
 @end
-
-const CGFloat ImageOffset = 0;
 
 @interface SimpleImageSlider () <UIScrollViewDelegate>
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) NSTimer *slideshowTimer;
 @end
-
 
 @implementation SimpleImageSlider
 
@@ -90,12 +86,9 @@ const CGFloat ImageOffset = 0;
     self.showsPageIndicators = YES;
 }
 
-
-
-
 #pragma mark - Main Method
 
-- (void)updateUI
+- (void)render
 {
     //bail if we don't have any data
     if ([self proxyData] == nil) {
@@ -115,7 +108,6 @@ const CGFloat ImageOffset = 0;
     
         //iterate through the imageobjects and create an imageview
     for (int i = 0; i < [self proxyData].count; i++) {
-        
         //create frame size & position
         CGRect imageSize = CGRectMake(i * width + ImageOffset,
                                       0,
@@ -123,7 +115,6 @@ const CGFloat ImageOffset = 0;
                                       height);
         
         if ([self proxyData] == self.customViews) {
-            
             UIView *view = self.customViews[i];
             view.frame = imageSize;
             view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
@@ -153,7 +144,6 @@ const CGFloat ImageOffset = 0;
     CGFloat sizeWidth = ([self proxyData].count * width) + (ImageOffset * [self proxyData].count) - ImageOffset;
     self.contentSize = CGSizeMake(sizeWidth, height);
 }
-
 
 #pragma mark - Scroll View Delegate
 
@@ -200,7 +190,6 @@ const CGFloat ImageOffset = 0;
     [self scrollRectToVisible:imagesFrame animated:animated];
 }
 
-
 #pragma mark - Setters
 
 - (void)setImageURLs:(NSArray *)imageURLs
@@ -208,7 +197,7 @@ const CGFloat ImageOffset = 0;
     if (_imageURLs != imageURLs) {
         _imageURLs = imageURLs;
         
-        [self updateUI];
+        [self render];
         [self setupPageControl];
     }
 }
@@ -218,7 +207,7 @@ const CGFloat ImageOffset = 0;
     if (_images != images) {
         _images = images;
         
-        [self updateUI];
+        [self render];
         [self setupPageControl];
     }
 }
@@ -228,7 +217,7 @@ const CGFloat ImageOffset = 0;
     if (_customViews != customViews) {
         _customViews = customViews;
         
-        [self updateUI];
+        [self render];
         [self setupPageControl];
     }
 }
@@ -288,7 +277,6 @@ const CGFloat ImageOffset = 0;
     }
 }
 
-
 #pragma mark - Parallax
 
 - (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView height:(CGFloat)height;
@@ -334,7 +322,11 @@ const CGFloat ImageOffset = 0;
     [UIView transitionWithView:self
                       duration:0.25
                        options:UIViewAnimationOptionTransitionCrossDissolve
-                    animations:^{ self.image = image; }
+                    animations:^{
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        self.image = image;
+                                    });
+                                }
                     completion:nil];
 }
 

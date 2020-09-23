@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		22B2753CB080DFA7B29C90DF /* Pods_SimpleImageSlider_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719C860744E1E5ADAE2C2999 /* Pods_SimpleImageSlider_Example.framework */; };
-		4507B1F21D132B9C0007502D /* CHCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4507B1F11D132B9C0007502D /* CHCollectionViewController.m */; };
+		4507B1F21D132B9C0007502D /* SISCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4507B1F11D132B9C0007502D /* SISCollectionViewController.m */; };
 		457D58A81CFE06650012C387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457D58A31CFE06650012C387 /* Main.storyboard */; };
-		457D58A91CFE06650012C387 /* CHImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D58A51CFE06650012C387 /* CHImagesViewController.m */; };
-		457D58AA1CFE06650012C387 /* CHImageURLsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D58A71CFE06650012C387 /* CHImageURLsViewController.m */; };
+		457D58A91CFE06650012C387 /* SISImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D58A51CFE06650012C387 /* SISImagesViewController.m */; };
+		457D58AA1CFE06650012C387 /* SISImageURLsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D58A71CFE06650012C387 /* SISImageURLsViewController.m */; };
 		457D58AC1CFE066F0012C387 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457D58AB1CFE066F0012C387 /* Images.xcassets */; };
 		457D58AE1CFE078A0012C387 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457D58AD1CFE078A0012C387 /* Launch Screen.storyboard */; };
-		45C7B79E1D131F7000895F7D /* CHParallaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C7B79D1D131F7000895F7D /* CHParallaxViewController.m */; };
-		45FC812E1CFE520200CC8390 /* CHInterfaceBuilderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FC812D1CFE520200CC8390 /* CHInterfaceBuilderViewController.m */; };
-		45FC81311CFE528F00CC8390 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FC81301CFE528F00CC8390 /* CHViewController.m */; };
+		45C7B79E1D131F7000895F7D /* SISParallaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C7B79D1D131F7000895F7D /* SISParallaxViewController.m */; };
+		45FC812E1CFE520200CC8390 /* SISInterfaceBuilderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FC812D1CFE520200CC8390 /* SISInterfaceBuilderViewController.m */; };
+		45FC81311CFE528F00CC8390 /* SISViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FC81301CFE528F00CC8390 /* SISViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F59E195388D20070C39A /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* CHAppDelegate.m */; };
+		6003F59E195388D20070C39A /* SISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* SISAppDelegate.m */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -42,21 +42,21 @@
 
 /* Begin PBXFileReference section */
 		209B4CDB753B29B5F7CA3A1E /* SimpleImageSlider.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimpleImageSlider.podspec; path = ../SimpleImageSlider.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		4507B1F01D132B9B0007502D /* CHCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCollectionViewController.h; sourceTree = "<group>"; };
-		4507B1F11D132B9C0007502D /* CHCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCollectionViewController.m; sourceTree = "<group>"; };
+		4507B1F01D132B9B0007502D /* SISCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISCollectionViewController.h; sourceTree = "<group>"; };
+		4507B1F11D132B9C0007502D /* SISCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISCollectionViewController.m; sourceTree = "<group>"; };
 		457D58A31CFE06650012C387 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		457D58A41CFE06650012C387 /* CHImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHImagesViewController.h; sourceTree = "<group>"; };
-		457D58A51CFE06650012C387 /* CHImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHImagesViewController.m; sourceTree = "<group>"; };
-		457D58A61CFE06650012C387 /* CHImageURLsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHImageURLsViewController.h; sourceTree = "<group>"; };
-		457D58A71CFE06650012C387 /* CHImageURLsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHImageURLsViewController.m; sourceTree = "<group>"; };
+		457D58A41CFE06650012C387 /* SISImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISImagesViewController.h; sourceTree = "<group>"; };
+		457D58A51CFE06650012C387 /* SISImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISImagesViewController.m; sourceTree = "<group>"; };
+		457D58A61CFE06650012C387 /* SISImageURLsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISImageURLsViewController.h; sourceTree = "<group>"; };
+		457D58A71CFE06650012C387 /* SISImageURLsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISImageURLsViewController.m; sourceTree = "<group>"; };
 		457D58AB1CFE066F0012C387 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		457D58AD1CFE078A0012C387 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		45C7B79C1D131F7000895F7D /* CHParallaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHParallaxViewController.h; sourceTree = "<group>"; };
-		45C7B79D1D131F7000895F7D /* CHParallaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHParallaxViewController.m; sourceTree = "<group>"; };
-		45FC812C1CFE520200CC8390 /* CHInterfaceBuilderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHInterfaceBuilderViewController.h; sourceTree = "<group>"; };
-		45FC812D1CFE520200CC8390 /* CHInterfaceBuilderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHInterfaceBuilderViewController.m; sourceTree = "<group>"; };
-		45FC812F1CFE528F00CC8390 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
-		45FC81301CFE528F00CC8390 /* CHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
+		45C7B79C1D131F7000895F7D /* SISParallaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISParallaxViewController.h; sourceTree = "<group>"; };
+		45C7B79D1D131F7000895F7D /* SISParallaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISParallaxViewController.m; sourceTree = "<group>"; };
+		45FC812C1CFE520200CC8390 /* SISInterfaceBuilderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISInterfaceBuilderViewController.h; sourceTree = "<group>"; };
+		45FC812D1CFE520200CC8390 /* SISInterfaceBuilderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISInterfaceBuilderViewController.m; sourceTree = "<group>"; };
+		45FC812F1CFE528F00CC8390 /* SISViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISViewController.h; sourceTree = "<group>"; };
+		45FC81301CFE528F00CC8390 /* SISViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISViewController.m; sourceTree = "<group>"; };
 		532F7755AC2496EBCAB25187 /* Pods-SimpleImageSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleImageSlider_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleImageSlider_Example/Pods-SimpleImageSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SimpleImageSlider_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleImageSlider_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,8 +66,8 @@
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6003F59B195388D20070C39A /* SimpleImageSlider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleImageSlider-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* SISAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SISAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* SISAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SISAppDelegate.m; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* SimpleImageSlider_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleImageSlider_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
@@ -141,21 +141,21 @@
 		6003F593195388D20070C39A /* Example for SimpleImageSlider */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* CHAppDelegate.h */,
-				6003F59D195388D20070C39A /* CHAppDelegate.m */,
+				6003F59C195388D20070C39A /* SISAppDelegate.h */,
+				6003F59D195388D20070C39A /* SISAppDelegate.m */,
 				457D58A31CFE06650012C387 /* Main.storyboard */,
-				45FC812F1CFE528F00CC8390 /* CHViewController.h */,
-				45FC81301CFE528F00CC8390 /* CHViewController.m */,
-				457D58A41CFE06650012C387 /* CHImagesViewController.h */,
-				457D58A51CFE06650012C387 /* CHImagesViewController.m */,
-				457D58A61CFE06650012C387 /* CHImageURLsViewController.h */,
-				457D58A71CFE06650012C387 /* CHImageURLsViewController.m */,
-				45FC812C1CFE520200CC8390 /* CHInterfaceBuilderViewController.h */,
-				45FC812D1CFE520200CC8390 /* CHInterfaceBuilderViewController.m */,
-				45C7B79C1D131F7000895F7D /* CHParallaxViewController.h */,
-				45C7B79D1D131F7000895F7D /* CHParallaxViewController.m */,
-				4507B1F01D132B9B0007502D /* CHCollectionViewController.h */,
-				4507B1F11D132B9C0007502D /* CHCollectionViewController.m */,
+				45FC812F1CFE528F00CC8390 /* SISViewController.h */,
+				45FC81301CFE528F00CC8390 /* SISViewController.m */,
+				457D58A41CFE06650012C387 /* SISImagesViewController.h */,
+				457D58A51CFE06650012C387 /* SISImagesViewController.m */,
+				457D58A61CFE06650012C387 /* SISImageURLsViewController.h */,
+				457D58A71CFE06650012C387 /* SISImageURLsViewController.m */,
+				45FC812C1CFE520200CC8390 /* SISInterfaceBuilderViewController.h */,
+				45FC812D1CFE520200CC8390 /* SISInterfaceBuilderViewController.m */,
+				45C7B79C1D131F7000895F7D /* SISParallaxViewController.h */,
+				45C7B79D1D131F7000895F7D /* SISParallaxViewController.m */,
+				4507B1F01D132B9B0007502D /* SISCollectionViewController.h */,
+				4507B1F11D132B9C0007502D /* SISCollectionViewController.m */,
 				457D58AB1CFE066F0012C387 /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -262,7 +262,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CH;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Christian Hatch";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
@@ -278,6 +278,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -394,14 +395,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45C7B79E1D131F7000895F7D /* CHParallaxViewController.m in Sources */,
-				457D58A91CFE06650012C387 /* CHImagesViewController.m in Sources */,
-				457D58AA1CFE06650012C387 /* CHImageURLsViewController.m in Sources */,
-				6003F59E195388D20070C39A /* CHAppDelegate.m in Sources */,
-				45FC812E1CFE520200CC8390 /* CHInterfaceBuilderViewController.m in Sources */,
-				4507B1F21D132B9C0007502D /* CHCollectionViewController.m in Sources */,
+				45C7B79E1D131F7000895F7D /* SISParallaxViewController.m in Sources */,
+				457D58A91CFE06650012C387 /* SISImagesViewController.m in Sources */,
+				457D58AA1CFE06650012C387 /* SISImageURLsViewController.m in Sources */,
+				6003F59E195388D20070C39A /* SISAppDelegate.m in Sources */,
+				45FC812E1CFE520200CC8390 /* SISInterfaceBuilderViewController.m in Sources */,
+				4507B1F21D132B9C0007502D /* SISCollectionViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				45FC81311CFE528F00CC8390 /* CHViewController.m in Sources */,
+				45FC81311CFE528F00CC8390 /* SISViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -465,6 +467,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -489,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -518,6 +522,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -535,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -547,7 +552,7 @@
 			baseConfigurationReference = 532F7755AC2496EBCAB25187 /* Pods-SimpleImageSlider_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				DEVELOPMENT_TEAM = YWKER65N63;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleImageSlider/SimpleImageSlider-Prefix.pch";
@@ -564,7 +569,7 @@
 			baseConfigurationReference = E80D53E9AEC00B3D00500393 /* Pods-SimpleImageSlider_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				DEVELOPMENT_TEAM = YWKER65N63;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleImageSlider/SimpleImageSlider-Prefix.pch";

@@ -1,5 +1,5 @@
 //
-//  CHInterfaceBuilderViewController.h
+//  SISInterfaceBuilderViewController.h
 //  SimpleImageSlider
 //
 //  Created by Christian Hatch on 5/31/16.
@@ -7,9 +7,8 @@
 //
 
 @import UIKit;
-#import "CHViewController.h"
+#import "SISViewController.h"
 
-
-@interface CHInterfaceBuilderViewController : CHViewController
+@interface SISInterfaceBuilderViewController : SISViewController
 
 @end

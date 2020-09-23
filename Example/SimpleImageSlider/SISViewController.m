@@ -1,18 +1,18 @@
 //
-//  CHViewController.m
+//  SISViewController.m
 //  SimpleImageSlider
 //
 //  Created by Christian Hatch on 5/31/16.
 //  Copyright © 2016 Christian Hatch. All rights reserved.
 //
 
-#import "CHViewController.h"
+#import "SISViewController.h"
 
-@interface CHViewController ()  <UITableViewDelegate, UITableViewDataSource>
+@interface SISViewController ()  <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
-@implementation CHViewController
+@implementation SISViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
