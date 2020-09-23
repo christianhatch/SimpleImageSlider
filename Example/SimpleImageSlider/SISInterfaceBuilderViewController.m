@@ -1,22 +1,20 @@
 //
-//  CHInterfaceBuilderViewController.m
+//  SISInterfaceBuilderViewController.m
 //  SimpleImageSlider
 //
 //  Created by Christian Hatch on 5/31/16.
 //  Copyright © 2016 Christian Hatch. All rights reserved.
 //
 
-#import "CHInterfaceBuilderViewController.h"
+#import "SISInterfaceBuilderViewController.h"
 #import <SimpleImageSlider/SimpleImageSlider.h>
 
-@interface CHInterfaceBuilderViewController ()
-
+@interface SISInterfaceBuilderViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet SimpleImageSlider *imageSlider;
-
 @end
 
-@implementation CHInterfaceBuilderViewController
+@implementation SISInterfaceBuilderViewController
 
 
 - (void)viewDidAppear:(BOOL)animated
@@ -35,6 +33,5 @@
     
     self.imageSlider.images = images;
 }
-
 
 @end

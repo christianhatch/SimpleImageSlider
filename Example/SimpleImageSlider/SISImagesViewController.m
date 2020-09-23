@@ -1,20 +1,20 @@
 //
-//  CHImagesViewController.m
+//  SISImagesViewController.m
 //  ImageSlider
 //
 //  Created by Christian Hatch on 5/31/16.
 //  Copyright © 2016 Christian Hatch. All rights reserved.
 //
 
-#import "CHImagesViewController.h"
+#import "SISImagesViewController.h"
 #import <SimpleImageSlider/SimpleImageSlider.h>
 
-@interface CHImagesViewController () <UIScrollViewDelegate>
+@interface SISImagesViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 
-@implementation CHImagesViewController
+@implementation SISImagesViewController
 
 - (void)setupHeader {
     NSArray *images = @[[UIImage imageNamed:@"image1"],
@@ -35,15 +35,3 @@
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-

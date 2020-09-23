@@ -1,5 +1,5 @@
 //
-//  CHAppDelegate.h
+//  SISAppDelegate.h
 //  SimpleImageSlider
 //
 //  Created by Christian Hatch on 05/31/2016.
@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface CHAppDelegate : UIResponder <UIApplicationDelegate>
+@interface SISAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

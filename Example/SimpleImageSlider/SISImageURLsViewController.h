@@ -1,5 +1,5 @@
 //
-//  CHImageURLsViewController.h
+//  SISImageURLsViewController.h
 //  ImageSlider
 //
 //  Created by Christian Hatch on 5/31/16.
@@ -7,8 +7,8 @@
 //
 
 @import UIKit;
-#import "CHViewController.h"
+#import "SISViewController.h"
 
-@interface CHImageURLsViewController : CHViewController
+@interface SISImageURLsViewController : SISViewController
 
 @end

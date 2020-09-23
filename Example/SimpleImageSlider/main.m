@@ -7,11 +7,11 @@
 //
 
 @import UIKit;
-#import "CHAppDelegate.h"
+#import "SISAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([CHAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([SISAppDelegate class]));
     }
 }

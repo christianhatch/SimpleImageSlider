@@ -1,19 +1,19 @@
 //
-//  CHCollectionViewController.m
+//  SISCollectionViewController.m
 //  SimpleImageSlider
 //
 //  Created by Christian Hatch on 6/16/16.
 //  Copyright © 2016 Christian Hatch. All rights reserved.
 //
 
-#import "CHCollectionViewController.h"
+#import "SISCollectionViewController.h"
 #import <SimpleImageSlider/SimpleImageSlider.h>
 
-@interface CHCollectionViewController () <UIScrollViewDelegate>
+@interface SISCollectionViewController () <UIScrollViewDelegate>
 @property (nonatomic, strong) SimpleImageSlider *header;
 @end
 
-@implementation CHCollectionViewController
+@implementation SISCollectionViewController
 
 static NSString * const reuseIdentifier = @"UICollectionViewCell";
 
@@ -54,7 +54,6 @@ static NSString * const reuseIdentifier = @"UICollectionViewCell";
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 200;
 }
@@ -75,13 +74,3 @@ static NSString * const reuseIdentifier = @"UICollectionViewCell";
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
