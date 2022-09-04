@@ -101,31 +101,4 @@
  */
 @property (nonatomic) BOOL stopsSlideShowOnScroll;
 
-#pragma mark - Parallax
-
-/**
- *  Adds a parallax effect when scrolling in the scrollview. Use this method to add the effect with a fixed height.
- *
- *  @param scrollView The scrollview to which the parallax effect should be added.
- *  @param height The desired height of the SimpleImageSlider.
- */
-- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView height:(CGFloat)height;
-
-/**
- *  Adds a parallax effect when scrolling in the scrollview. Use this method to add the effect with a height based on a given aspect ratio of the scrollview's width, clamped to within a min and max value.
- *
- *  @param scrollView  The scrollview to which the parallax effect should be added.
- *  @param aspectRatio The aspect ratio of the SimpleImageSlider.
- *  @param minHeight   The minimum height that the SimpleImageSlider should be.
- *  @param maxHeight   The maximum height that the SimpleImageSlider should be.
- */
-//- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView aspectRatio:(CGFloat)aspectRatio minHeight:(CGFloat)minHeight maxHeight:(CGFloat)maxHeight;
-
-/**
- *  If the parallax effect has been added (by calling 'addParallaxToScrollView:') then you must call this method as the scroll view scrolls.
- *
- *  @param scrollView The scrollview that is scrolling, and to which the SimpleImageSlider has been added as a subview and on which 'addParallaxToScrollView:height:' has been called.
- */
-- (void)scrollViewScrolled:(nonnull UIScrollView *)scrollView;
-
 @end

@@ -1,24 +1,16 @@
 PODS:
-  - PureLayout (3.1.6)
-  - SimpleImageSlider (3.0.0):
-    - PureLayout
+  - SimpleImageSlider (3.1.0)
 
 DEPENDENCIES:
-  - PureLayout
   - SimpleImageSlider (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - PureLayout
 
 EXTERNAL SOURCES:
   SimpleImageSlider:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
-  SimpleImageSlider: 4b8fa9fc78bf5782a257cea8941b53d83e8743a8
+  SimpleImageSlider: 0ec1954d2a557e52f2b5a20882f700c50d7710a8
 
-PODFILE CHECKSUM: ca5790365fc7d5eef756e71a9675dfb23319de0a
+PODFILE CHECKSUM: b20e375bb6cef8d83370d80973b5b542fd1fd3e3
 
-COCOAPODS: 1.10.0.rc.1
+COCOAPODS: 1.11.3

@@ -3,5 +3,4 @@ use_frameworks!
 
 target 'SimpleImageSlider_Example' do
   pod 'SimpleImageSlider', :path => '../'
-  pod 'PureLayout'
 end

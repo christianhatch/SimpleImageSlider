@@ -38,14 +38,8 @@ static NSString * const reuseIdentifier = @"UICollectionViewCell";
                         [UIImage imageNamed:@"image5"]];
     
     self.header = [SimpleImageSlider imageSliderWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300) images:images];
-    [self.header addParallaxToScrollView:self.collectionView height:300];
     
     [self.header startSlideshowWithTime:5];
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    [self.header scrollViewScrolled:scrollView];
 }
 
 #pragma mark <UICollectionViewDataSource>
