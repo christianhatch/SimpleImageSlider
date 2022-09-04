@@ -13,7 +13,7 @@ let package = Package(
     targets: [
         .target(
             name: "SimpleImageSlider",
-            exclude: ["Example"]),
+            exclude: ["../../Example"]),
         .testTarget(
             name: "SimpleImageSliderTests",
             dependencies: ["SimpleImageSlider"]),
