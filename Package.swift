@@ -15,7 +15,6 @@ let package = Package(
             name: "SimpleImageSlider"),
         .testTarget(
             name: "SimpleImageSliderTests",
-            dependencies: ["SimpleImageSlider"],
-            exclude: ["../Example"]),
+            dependencies: ["SimpleImageSlider"]),
     ]
 )
