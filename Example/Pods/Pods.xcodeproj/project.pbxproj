@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D041CBEF895B4DFDEB3344F2F7975A7 /* SimpleImageSliderIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CAE97D0AB3E286CEC6340A128772F5 /* SimpleImageSliderIncludes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2621FC235D075547B43D3F3872D5173D /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F66714670BEA2F02A67149FFDEEDEA6 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		271CF1F652D6521709325C5BB9DF4177 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		44FEC0727A4E2AD69F6AABAC4C776A37 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 62D6E68A55E5C0C5C7BEF0BE368CD935 /* module.modulemap */; };
@@ -76,13 +75,12 @@
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75136DFE76E24304D8377960A4856F22 /* SimpleImageSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SimpleImageSlider.m; path = Sources/SimpleImageSlider/SimpleImageSlider.m; sourceTree = "<group>"; };
 		7F66714670BEA2F02A67149FFDEEDEA6 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
-		88CAE97D0AB3E286CEC6340A128772F5 /* SimpleImageSliderIncludes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SimpleImageSliderIncludes.h; sourceTree = "<group>"; };
 		90394AC0F8CE934B1754A9D189F8BA41 /* Pods-SimpleImageSlider_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleImageSlider_Example-Info.plist"; sourceTree = "<group>"; };
 		950BFB13C3F461C7AC6E88BDA4CCC3F1 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E9B8A605CC616DA391BE028AC718C53 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		AB586A7A8FDC1784D640F872D02B90DB /* PureLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.release.xcconfig; sourceTree = "<group>"; };
-		AEA31CB89CE7F348873856A02D84D6B3 /* SimpleImageSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimpleImageSlider.h; path = Sources/SimpleImageSlider/SimpleImageSlider.h; sourceTree = "<group>"; };
+		AEA31CB89CE7F348873856A02D84D6B3 /* SimpleImageSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SimpleImageSlider.h; sourceTree = "<group>"; };
 		AF2DE1A93EF030EA1D9EE23D46BB3C3D /* Pods-SimpleImageSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleImageSlider_Example-umbrella.h"; sourceTree = "<group>"; };
 		B296A649D26E8BD0A727584B613BE0F0 /* SimpleImageSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleImageSlider.debug.xcconfig; sourceTree = "<group>"; };
 		B83D6B9B2B530259D869B941C15ADC5E /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
@@ -141,8 +139,8 @@
 		36BC712E82C36A186C40F94B24D180BE /* include */ = {
 			isa = PBXGroup;
 			children = (
+				AEA31CB89CE7F348873856A02D84D6B3 /* SimpleImageSlider.h */,
 				62D6E68A55E5C0C5C7BEF0BE368CD935 /* module.modulemap */,
-				88CAE97D0AB3E286CEC6340A128772F5 /* SimpleImageSliderIncludes.h */,
 			);
 			name = include;
 			path = Sources/SimpleImageSlider/include;
@@ -239,7 +237,6 @@
 		E1A67AC18828A99AEA466891C6AADE5D /* SimpleImageSlider */ = {
 			isa = PBXGroup;
 			children = (
-				AEA31CB89CE7F348873856A02D84D6B3 /* SimpleImageSlider.h */,
 				75136DFE76E24304D8377960A4856F22 /* SimpleImageSlider.m */,
 				36BC712E82C36A186C40F94B24D180BE /* include */,
 				65B203D1249018B874461CFFE06E9B42 /* Pod */,
@@ -312,7 +309,6 @@
 			files = (
 				51C20D2ACFD0664D309276ED376F6212 /* SimpleImageSlider.h in Headers */,
 				6297F3F35E8FC2FE66ACBD54A0848D5F /* SimpleImageSlider-umbrella.h in Headers */,
-				0D041CBEF895B4DFDEB3344F2F7975A7 /* SimpleImageSliderIncludes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
