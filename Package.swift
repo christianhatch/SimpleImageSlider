@@ -9,12 +9,11 @@ let package = Package(
             name: "SimpleImageSlider",
             targets: ["SimpleImageSlider"]),
     ],
-    dependencies: [
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "SimpleImageSlider",
-            dependencies: []),
+            exclude: ["Example"]),
         .testTarget(
             name: "SimpleImageSliderTests",
             dependencies: ["SimpleImageSlider"]),
