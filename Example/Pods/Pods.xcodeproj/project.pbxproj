@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13743C97BDA9725FAC262E4A0E7300F6 /* SimpleImageSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 949C8659606135C82DAF2966B1BF5F12 /* SimpleImageSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13743C97BDA9725FAC262E4A0E7300F6 /* SimpleImageSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57E009FE7EFF466D2DE23C46481DBC39 /* SimpleImageSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		155945564E2A14BF0D088626D5E2F493 /* Pods-SimpleImageSlider_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF5A21B46B9560697F759FC0538890F /* Pods-SimpleImageSlider_Example-dummy.m */; };
-		A31FADA0FDF2CB4BBA8E58E8BF771052 /* SimpleImageSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3079C54C88E2AEE7FAEBD09ADF3E7A /* SimpleImageSlider-dummy.m */; };
-		A82322BF413B55E6E59BC2CD17A8A2C7 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 7D421522C60ABC34218AB687229B6E50 /* module.modulemap */; };
+		A31FADA0FDF2CB4BBA8E58E8BF771052 /* SimpleImageSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 739446A9196BC0D143D92DB0356603B3 /* SimpleImageSlider-dummy.m */; };
+		A82322BF413B55E6E59BC2CD17A8A2C7 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 46C62C28E51DDB0628320767C4088A94 /* module.modulemap */; };
 		C95400328D1759C69781D532738B0395 /* Pods-SimpleImageSlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF2DE1A93EF030EA1D9EE23D46BB3C3D /* Pods-SimpleImageSlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5FB6E6082144CBC3C471A3B06B38533 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		ED92ECE97C9D00A1B55B46F4B51D4121 /* SimpleImageSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 820B6C17FB8CCFC0353958E48B8943C4 /* SimpleImageSlider.m */; };
+		ED92ECE97C9D00A1B55B46F4B51D4121 /* SimpleImageSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCDB5CBE92A60A19CAA74B6153242C7 /* SimpleImageSlider.m */; };
 		EE7D00791C573CC8947BD51840A73DBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		FACD9C97569F7BF7086677F4E2106644 /* SimpleImageSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BFD57D0C971EEB1C7F0AA60C93EF837 /* SimpleImageSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FACD9C97569F7BF7086677F4E2106644 /* SimpleImageSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B75AE356F510247EAF6D354D0ECF18E /* SimpleImageSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,31 +29,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09F69FC4985434ADC375DF8BD99D91CB /* SimpleImageSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SimpleImageSlider-Info.plist"; sourceTree = "<group>"; };
+		0B75AE356F510247EAF6D354D0ECF18E /* SimpleImageSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SimpleImageSlider.h; sourceTree = "<group>"; };
+		0E2E516FB2F2AA5FB8C3945A99C14169 /* SimpleImageSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleImageSlider.release.xcconfig; sourceTree = "<group>"; };
+		119BDF34737D9A9C7AD901B139B11590 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		16363B2140BBCA54AFEC3F7D8B5A47E8 /* Pods-SimpleImageSlider_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleImageSlider_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2B2047D7E967A4C8F9B909B0103E4F27 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		3F34FDD6052023A96830B772A13523DE /* Pods-SimpleImageSlider_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleImageSlider_Example-frameworks.sh"; sourceTree = "<group>"; };
+		46C62C28E51DDB0628320767C4088A94 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = module.modulemap; sourceTree = "<group>"; };
 		512409D5176D8C2FD45ADA64818BD464 /* Pods-SimpleImageSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleImageSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
 		57D14BCDF19375215BE6F4B48A28933D /* Pods-SimpleImageSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleImageSlider_Example.modulemap"; sourceTree = "<group>"; };
 		57D6CA6F170585E6120C816C31599C85 /* Pods-SimpleImageSlider_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SimpleImageSlider_Example"; path = Pods_SimpleImageSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57E009FE7EFF466D2DE23C46481DBC39 /* SimpleImageSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleImageSlider-umbrella.h"; sourceTree = "<group>"; };
 		593CBC07399B9E9AB776AEDEAAED192C /* Pods-SimpleImageSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleImageSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5B677278AC884F1F07F5E8E0669A040B /* SimpleImageSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimpleImageSlider.modulemap; sourceTree = "<group>"; };
-		5BFD57D0C971EEB1C7F0AA60C93EF837 /* SimpleImageSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SimpleImageSlider.h; sourceTree = "<group>"; };
-		608696EA36499EFF20AFAA1403ABD237 /* SimpleImageSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SimpleImageSlider-Info.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7D421522C60ABC34218AB687229B6E50 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = module.modulemap; sourceTree = "<group>"; };
-		820B6C17FB8CCFC0353958E48B8943C4 /* SimpleImageSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SimpleImageSlider.m; path = Sources/SimpleImageSlider/SimpleImageSlider.m; sourceTree = "<group>"; };
-		8D3079C54C88E2AEE7FAEBD09ADF3E7A /* SimpleImageSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleImageSlider-dummy.m"; sourceTree = "<group>"; };
+		739446A9196BC0D143D92DB0356603B3 /* SimpleImageSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleImageSlider-dummy.m"; sourceTree = "<group>"; };
 		90394AC0F8CE934B1754A9D189F8BA41 /* Pods-SimpleImageSlider_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleImageSlider_Example-Info.plist"; sourceTree = "<group>"; };
-		92A52D578D3B5DAA6ECBD209DF0B22ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		949C8659606135C82DAF2966B1BF5F12 /* SimpleImageSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleImageSlider-umbrella.h"; sourceTree = "<group>"; };
+		9CCDB5CBE92A60A19CAA74B6153242C7 /* SimpleImageSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SimpleImageSlider.m; path = Sources/SimpleImageSlider/SimpleImageSlider.m; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA05E5ABE96D97EDE59C64B7E8C325EE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		AF2DE1A93EF030EA1D9EE23D46BB3C3D /* Pods-SimpleImageSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleImageSlider_Example-umbrella.h"; sourceTree = "<group>"; };
-		B6F737697AD69AA6F90B8CBD5628C118 /* SimpleImageSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleImageSlider-prefix.pch"; sourceTree = "<group>"; };
-		BC1EF1127E7E855BACA90BF62A9E7F18 /* SimpleImageSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleImageSlider.release.xcconfig; sourceTree = "<group>"; };
-		CDCB7E659EC789A90635CE3E0B07CB4A /* SimpleImageSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleImageSlider.debug.xcconfig; sourceTree = "<group>"; };
+		B90D6F0F650FBE5531027FC88CBBC501 /* SimpleImageSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SimpleImageSlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CDF5A21B46B9560697F759FC0538890F /* Pods-SimpleImageSlider_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleImageSlider_Example-dummy.m"; sourceTree = "<group>"; };
 		D2884E920D11E5B6BDBF2B0A773811B7 /* Pods-SimpleImageSlider_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleImageSlider_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F1B16CECAEC2F7DC4873ED01FAFEE940 /* SimpleImageSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SimpleImageSlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D6E171EE69A62489374B8AB530F0B57E /* SimpleImageSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimpleImageSlider.modulemap; sourceTree = "<group>"; };
+		E4FC719722918169167B25F1B573F317 /* SimpleImageSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleImageSlider.debug.xcconfig; sourceTree = "<group>"; };
+		F09FE04FB0DF288E9BF11A8C6C98FD7F /* SimpleImageSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleImageSlider-prefix.pch"; sourceTree = "<group>"; };
 		F2B79C0565C927A51AF11D3EC62D3427 /* SimpleImageSlider */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimpleImageSlider; path = SimpleImageSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,41 +77,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		202E960FB9876D0C20DA5B979BDC6ED8 /* Support Files */ = {
+		1E035AC08761829EC4CF0351C4396C6B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5B677278AC884F1F07F5E8E0669A040B /* SimpleImageSlider.modulemap */,
-				8D3079C54C88E2AEE7FAEBD09ADF3E7A /* SimpleImageSlider-dummy.m */,
-				608696EA36499EFF20AFAA1403ABD237 /* SimpleImageSlider-Info.plist */,
-				B6F737697AD69AA6F90B8CBD5628C118 /* SimpleImageSlider-prefix.pch */,
-				949C8659606135C82DAF2966B1BF5F12 /* SimpleImageSlider-umbrella.h */,
-				CDCB7E659EC789A90635CE3E0B07CB4A /* SimpleImageSlider.debug.xcconfig */,
-				BC1EF1127E7E855BACA90BF62A9E7F18 /* SimpleImageSlider.release.xcconfig */,
+				3B66CE501FCA3D1907A9165D9310F4C0 /* SimpleImageSlider */,
 			);
-			name = "Support Files";
-			path = "Tests/Example/Pods/Target Support Files/SimpleImageSlider";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		24DDCBB1D2F830EA84D15DD505FD3BD9 /* SimpleImageSlider */ = {
+		3B66CE501FCA3D1907A9165D9310F4C0 /* SimpleImageSlider */ = {
 			isa = PBXGroup;
 			children = (
-				820B6C17FB8CCFC0353958E48B8943C4 /* SimpleImageSlider.m */,
-				4B3DCC8A2AC0792765D1531AEB690351 /* include */,
-				3A4332E3359D36C1DA077530144B1158 /* Pod */,
-				202E960FB9876D0C20DA5B979BDC6ED8 /* Support Files */,
+				9CCDB5CBE92A60A19CAA74B6153242C7 /* SimpleImageSlider.m */,
+				C48762E4D9942A9DF5C0CBCDFA7EA4A6 /* include */,
+				63353B66AF6CBA037D0BB07293F86185 /* Pod */,
+				699047CD8FBF15212419F7124B3B1314 /* Support Files */,
 			);
 			name = SimpleImageSlider;
-			path = ../../..;
-			sourceTree = "<group>";
-		};
-		3A4332E3359D36C1DA077530144B1158 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				92A52D578D3B5DAA6ECBD209DF0B22ED /* LICENSE */,
-				2B2047D7E967A4C8F9B909B0103E4F27 /* README.md */,
-				F1B16CECAEC2F7DC4873ED01FAFEE940 /* SimpleImageSlider.podspec */,
-			);
-			name = Pod;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		407A4769F7059CE200A31EE5FCA240F7 /* Products */ = {
@@ -123,30 +106,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		492276D6B22EA8D46C4A7F9C6DBA2313 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				24DDCBB1D2F830EA84D15DD505FD3BD9 /* SimpleImageSlider */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		4B3DCC8A2AC0792765D1531AEB690351 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				7D421522C60ABC34218AB687229B6E50 /* module.modulemap */,
-				5BFD57D0C971EEB1C7F0AA60C93EF837 /* SimpleImageSlider.h */,
-			);
-			name = include;
-			path = Sources/SimpleImageSlider/include;
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		63353B66AF6CBA037D0BB07293F86185 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				119BDF34737D9A9C7AD901B139B11590 /* LICENSE */,
+				AA05E5ABE96D97EDE59C64B7E8C325EE /* README.md */,
+				B90D6F0F650FBE5531027FC88CBBC501 /* SimpleImageSlider.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		699047CD8FBF15212419F7124B3B1314 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6E171EE69A62489374B8AB530F0B57E /* SimpleImageSlider.modulemap */,
+				739446A9196BC0D143D92DB0356603B3 /* SimpleImageSlider-dummy.m */,
+				09F69FC4985434ADC375DF8BD99D91CB /* SimpleImageSlider-Info.plist */,
+				F09FE04FB0DF288E9BF11A8C6C98FD7F /* SimpleImageSlider-prefix.pch */,
+				57E009FE7EFF466D2DE23C46481DBC39 /* SimpleImageSlider-umbrella.h */,
+				E4FC719722918169167B25F1B573F317 /* SimpleImageSlider.debug.xcconfig */,
+				0E2E516FB2F2AA5FB8C3945A99C14169 /* SimpleImageSlider.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SimpleImageSlider";
 			sourceTree = "<group>";
 		};
 		9308201BC04F1D3C99199C064B64D626 /* Targets Support Files */ = {
@@ -174,11 +164,21 @@
 			path = "Target Support Files/Pods-SimpleImageSlider_Example";
 			sourceTree = "<group>";
 		};
+		C48762E4D9942A9DF5C0CBCDFA7EA4A6 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				46C62C28E51DDB0628320767C4088A94 /* module.modulemap */,
+				0B75AE356F510247EAF6D354D0ECF18E /* SimpleImageSlider.h */,
+			);
+			name = include;
+			path = Sources/SimpleImageSlider/include;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				492276D6B22EA8D46C4A7F9C6DBA2313 /* Development Pods */,
+				1E035AC08761829EC4CF0351C4396C6B /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				407A4769F7059CE200A31EE5FCA240F7 /* Products */,
 				9308201BC04F1D3C99199C064B64D626 /* Targets Support Files */,
@@ -427,7 +427,7 @@
 		};
 		6E14F0A0AFB73336C149B79C7444FFC3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC1EF1127E7E855BACA90BF62A9E7F18 /* SimpleImageSlider.release.xcconfig */;
+			baseConfigurationReference = 0E2E516FB2F2AA5FB8C3945A99C14169 /* SimpleImageSlider.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -525,7 +525,7 @@
 		};
 		B4FA0CCDDFD913E6BDDB2C38A428EC42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDCB7E659EC789A90635CE3E0B07CB4A /* SimpleImageSlider.debug.xcconfig */;
+			baseConfigurationReference = E4FC719722918169167B25F1B573F317 /* SimpleImageSlider.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
