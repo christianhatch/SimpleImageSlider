@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'SimpleImageSlider'
-    s.version          = '3.0.0'
+    s.version          = '3.1.0'
     s.summary          = 'SimpleImageSlider is a simple view that creates a scrollable gallery of images.'
 
     s.description      = <<-DESC
@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/christianhatch/SimpleImageSlider.git', :tag => s.version.to_s }
     s.social_media_url = 'https://twitter.com/commodoreftp'
     s.ios.deployment_target = '12.4'
-    s.source_files = 'SimpleImageSlider/Classes/**/*'
+    s.source_files = 'Sources/SimpleImageSlider/**/*'
     s.dependency 'PureLayout'
 end

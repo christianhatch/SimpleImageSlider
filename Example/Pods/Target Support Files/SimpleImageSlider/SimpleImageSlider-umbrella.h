@@ -10,8 +10,8 @@
 #endif
 #endif
 
+#import "SimpleImageSliderIncludes.h"
 #import "SimpleImageSlider.h"
-#import "UIScrollView+ParallaxHeader.h"
 
 FOUNDATION_EXPORT double SimpleImageSliderVersionNumber;
 FOUNDATION_EXPORT const unsigned char SimpleImageSliderVersionString[];

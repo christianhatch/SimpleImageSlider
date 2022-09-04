@@ -14,7 +14,6 @@
 		457D58AA1CFE06650012C387 /* SISImageURLsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D58A71CFE06650012C387 /* SISImageURLsViewController.m */; };
 		457D58AC1CFE066F0012C387 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457D58AB1CFE066F0012C387 /* Images.xcassets */; };
 		457D58AE1CFE078A0012C387 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457D58AD1CFE078A0012C387 /* Launch Screen.storyboard */; };
-		45C7B79E1D131F7000895F7D /* SISParallaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C7B79D1D131F7000895F7D /* SISParallaxViewController.m */; };
 		45FC812E1CFE520200CC8390 /* SISInterfaceBuilderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FC812D1CFE520200CC8390 /* SISInterfaceBuilderViewController.m */; };
 		45FC81311CFE528F00CC8390 /* SISViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FC81301CFE528F00CC8390 /* SISViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -51,8 +50,6 @@
 		457D58A71CFE06650012C387 /* SISImageURLsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISImageURLsViewController.m; sourceTree = "<group>"; };
 		457D58AB1CFE066F0012C387 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		457D58AD1CFE078A0012C387 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		45C7B79C1D131F7000895F7D /* SISParallaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISParallaxViewController.h; sourceTree = "<group>"; };
-		45C7B79D1D131F7000895F7D /* SISParallaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISParallaxViewController.m; sourceTree = "<group>"; };
 		45FC812C1CFE520200CC8390 /* SISInterfaceBuilderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISInterfaceBuilderViewController.h; sourceTree = "<group>"; };
 		45FC812D1CFE520200CC8390 /* SISInterfaceBuilderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISInterfaceBuilderViewController.m; sourceTree = "<group>"; };
 		45FC812F1CFE528F00CC8390 /* SISViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISViewController.h; sourceTree = "<group>"; };
@@ -152,8 +149,6 @@
 				457D58A71CFE06650012C387 /* SISImageURLsViewController.m */,
 				45FC812C1CFE520200CC8390 /* SISInterfaceBuilderViewController.h */,
 				45FC812D1CFE520200CC8390 /* SISInterfaceBuilderViewController.m */,
-				45C7B79C1D131F7000895F7D /* SISParallaxViewController.h */,
-				45C7B79D1D131F7000895F7D /* SISParallaxViewController.m */,
 				4507B1F01D132B9B0007502D /* SISCollectionViewController.h */,
 				4507B1F11D132B9C0007502D /* SISCollectionViewController.m */,
 				457D58AB1CFE066F0012C387 /* Images.xcassets */,
@@ -395,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45C7B79E1D131F7000895F7D /* SISParallaxViewController.m in Sources */,
 				457D58A91CFE06650012C387 /* SISImagesViewController.m in Sources */,
 				457D58AA1CFE06650012C387 /* SISImageURLsViewController.m in Sources */,
 				6003F59E195388D20070C39A /* SISAppDelegate.m in Sources */,

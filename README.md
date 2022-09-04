@@ -12,19 +12,23 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Usage
 SimpleImageSlider can be initialized with an array of NSURL objects that point to images, or with an array of UIImage objects. These will populate the ImageSlider. Check out the examples to see how to instantiate a SimpleImageSlider with images, urls, in code, and via Interface Builder.
 
-### Parallax
-To enable the parallax ('stretchy header') feature, call 
-`- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView` 
-passing the scrollview (or subclass, such as UICollectionView or UITableView) to which you want to add the SimpleImageSlider. 
-You must also call 
-`- (void)scrollViewScrolled:(nonnull UIScrollView *)scrollView` 
-on the SimpleImageSlider as the scrollview scrolls, to update the parallax effect; pass the scrollview from the
-`- (void)scrollViewDidScroll(UIScrollview *)scrollView`
-scrollview delegate method into the above method on the SimpleImageSlider. See the example for more details. 
-
 ## Requirements
 
 ## Installation
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler.
+
+Once you have your Swift package set up, adding AHDownloadButton as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/dockwa/Derulo", .upToNextMajor(from: "1.7.0"))
+]
+```
+
+### CocoaPods
 
 SimpleImageSlider is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:

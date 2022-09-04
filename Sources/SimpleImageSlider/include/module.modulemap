@@ -1,0 +1,3 @@
+module SimpleImageSlider {
+    header "SimpleImageSlider.h"
+}

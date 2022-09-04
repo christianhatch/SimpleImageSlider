@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bB4-hS-cMO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bB4-hS-cMO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,7 +24,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReuseID" textLabel="ETt-AV-PWD" style="IBUITableViewCellStyleDefault" id="V9w-Vb-b6w">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V9w-Vb-b6w" id="BQN-uh-yFV">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -81,7 +81,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReuseID" textLabel="SY5-sj-qEZ" style="IBUITableViewCellStyleDefault" id="w3A-si-fSa">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w3A-si-fSa" id="fJe-5d-PH1">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -143,7 +143,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReuseID" textLabel="79h-G0-zFo" style="IBUITableViewCellStyleDefault" id="iqm-bL-CYH">
-                                        <rect key="frame" x="0.0" y="328" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="344.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iqm-bL-CYH" id="Wwi-bV-ytZ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -198,7 +198,6 @@
                         <segue destination="xE0-pi-tQ8" kind="relationship" relationship="viewControllers" id="lT4-OM-Vf7"/>
                         <segue destination="ArT-j8-hCy" kind="relationship" relationship="viewControllers" id="yAx-lZ-sCG"/>
                         <segue destination="VTn-N1-4Vt" kind="relationship" relationship="viewControllers" id="KwW-fw-7Ef"/>
-                        <segue destination="YoE-tw-mgd" kind="relationship" relationship="viewControllers" id="apB-oy-LL1"/>
                         <segue destination="hvS-LA-orH" kind="relationship" relationship="viewControllers" id="9yS-kN-rvt"/>
                     </connections>
                 </tabBarController>
@@ -262,82 +261,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dtm-il-T5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1130" y="1842"/>
-        </scene>
-        <!--Parallax-->
-        <scene sceneID="g7g-wW-dag">
-            <objects>
-                <viewController storyboardIdentifier="SISParallaxViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9MR-XX-Ot9" customClass="SISParallaxViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iER-Xq-cQx"/>
-                        <viewControllerLayoutGuide type="bottom" id="VeO-0f-Srq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ntf-Hc-iJc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aNK-zM-uLa">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReuseID" textLabel="hKR-Jf-goq" style="IBUITableViewCellStyleDefault" id="02C-DR-BVL">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="02C-DR-BVL" id="D8N-KS-7gX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hKR-Jf-goq">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="9MR-XX-Ot9" id="xxh-3t-fnt"/>
-                                    <outlet property="delegate" destination="9MR-XX-Ot9" id="pxL-Og-RtB"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="aNK-zM-uLa" firstAttribute="leading" secondItem="ntf-Hc-iJc" secondAttribute="leading" id="4ib-Dg-FhJ"/>
-                            <constraint firstAttribute="trailing" secondItem="aNK-zM-uLa" secondAttribute="trailing" id="C9P-Sz-ltJ"/>
-                            <constraint firstAttribute="bottom" secondItem="aNK-zM-uLa" secondAttribute="bottom" id="MQX-lR-4Hn"/>
-                            <constraint firstItem="aNK-zM-uLa" firstAttribute="top" secondItem="ntf-Hc-iJc" secondAttribute="top" id="guZ-1G-9jC"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Parallax" id="Vyx-9U-qal"/>
-                    <connections>
-                        <outlet property="tableView" destination="aNK-zM-uLa" id="T0H-tb-QHr"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YdX-LP-p4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1942" y="2618"/>
-        </scene>
-        <!--Parallax-->
-        <scene sceneID="g0j-is-XFp">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YoE-tw-mgd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Parallax" id="07O-Sh-enx"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eom-Kn-P5P">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9MR-XX-Ot9" kind="relationship" relationship="rootViewController" id="kE1-kf-nNj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ocd-3w-UWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1130" y="2618"/>
         </scene>
         <!--CollectionView-->
         <scene sceneID="cR5-n5-iK4">

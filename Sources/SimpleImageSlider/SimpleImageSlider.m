@@ -7,7 +7,6 @@
 //
 
 #import "SimpleImageSlider.h"
-#import "UIScrollView+ParallaxHeader.h"
 
 const CGFloat ImageOffset = 0;
 
@@ -275,20 +274,6 @@ const CGFloat ImageOffset = 0;
         [self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
         [self addSubview:self.pageControl];
     }
-}
-
-#pragma mark - Parallax
-
-- (void)addParallaxToScrollView:(nonnull UIScrollView *)scrollView height:(CGFloat)height;
-{
-    [scrollView setParallaxHeaderView:self
-                                 mode:ParallaxHeaderModeTopFill
-                               height:height];
-}
-
-- (void)scrollViewScrolled:(UIScrollView *)scrollView;
-{
-    [scrollView shouldPositionParallaxHeader];
 }
 
 #pragma mark - Slideshow
