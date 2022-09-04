@@ -19,10 +19,5 @@
   "platforms": {
     "ios": "12.4"
   },
-  "source_files": "Sources/SimpleImageSlider/**/*",
-  "dependencies": {
-    "PureLayout": [
-
-    ]
-  }
+  "source_files": "Sources/SimpleImageSlider/**/*"
 }

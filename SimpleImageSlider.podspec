@@ -14,5 +14,4 @@ Pod::Spec.new do |s|
     s.social_media_url = 'https://twitter.com/commodoreftp'
     s.ios.deployment_target = '12.4'
     s.source_files = 'Sources/SimpleImageSlider/**/*'
-    s.dependency 'PureLayout'
 end

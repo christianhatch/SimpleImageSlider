@@ -40,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		209B4CDB753B29B5F7CA3A1E /* SimpleImageSlider.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimpleImageSlider.podspec; path = ../SimpleImageSlider.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4507B1F01D132B9B0007502D /* SISCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISCollectionViewController.h; sourceTree = "<group>"; };
 		4507B1F11D132B9C0007502D /* SISCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISCollectionViewController.m; sourceTree = "<group>"; };
 		457D58A31CFE06650012C387 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +49,9 @@
 		457D58A71CFE06650012C387 /* SISImageURLsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISImageURLsViewController.m; sourceTree = "<group>"; };
 		457D58AB1CFE066F0012C387 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		457D58AD1CFE078A0012C387 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		45C94CA928C45BF900277E85 /* SimpleImageSlider.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = SimpleImageSlider.podspec; path = ../../SimpleImageSlider.podspec; sourceTree = "<group>"; };
+		45C94CAA28C45C0300277E85 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		45C94CAB28C45C0B00277E85 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 		45FC812C1CFE520200CC8390 /* SISInterfaceBuilderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISInterfaceBuilderViewController.h; sourceTree = "<group>"; };
 		45FC812D1CFE520200CC8390 /* SISInterfaceBuilderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISInterfaceBuilderViewController.m; sourceTree = "<group>"; };
 		45FC812F1CFE528F00CC8390 /* SISViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISViewController.h; sourceTree = "<group>"; };
@@ -72,8 +74,6 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		719C860744E1E5ADAE2C2999 /* Pods_SimpleImageSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleImageSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77CC7ABAECE5FACB944A4748 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		8726EBAF9E72830BC9151FE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E80D53E9AEC00B3D00500393 /* Pods-SimpleImageSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleImageSlider_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleImageSlider_Example/Pods-SimpleImageSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,9 +192,9 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				209B4CDB753B29B5F7CA3A1E /* SimpleImageSlider.podspec */,
-				77CC7ABAECE5FACB944A4748 /* README.md */,
-				8726EBAF9E72830BC9151FE5 /* LICENSE */,
+				45C94CA928C45BF900277E85 /* SimpleImageSlider.podspec */,
+				45C94CAA28C45C0300277E85 /* README.md */,
+				45C94CAB28C45C0B00277E85 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -270,10 +270,9 @@
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "SimpleImageSlider" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -355,12 +354,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SimpleImageSlider_Example/Pods-SimpleImageSlider_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SimpleImageSlider/SimpleImageSlider.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleImageSlider.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

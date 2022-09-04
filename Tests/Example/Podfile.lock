@@ -1,0 +1,16 @@
+PODS:
+  - SimpleImageSlider (3.1.0)
+
+DEPENDENCIES:
+  - SimpleImageSlider (from `../../`)
+
+EXTERNAL SOURCES:
+  SimpleImageSlider:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  SimpleImageSlider: 0ec1954d2a557e52f2b5a20882f700c50d7710a8
+
+PODFILE CHECKSUM: 23e316c160bc7c6edff6ff1ae05a58fc2fd40365
+
+COCOAPODS: 1.11.3
